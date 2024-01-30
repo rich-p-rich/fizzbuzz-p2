@@ -3,7 +3,7 @@
 
 /* Asterisk wildcard selector overrides default styles from browser*/
 * {
-    padding: 0;
+    padding: 1;
     margin: 0;
     box-sizing: border-box;
 }
@@ -14,11 +14,18 @@ body {
     display: flex;
     flex-direction: column;
     color: #3a3a3a;
+    font-family: 'Roboto', sans-serif;
 
 }
 
 header {
     background-color: lightcyan;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Inconsolata', sans-serif;
 }
 
 main {
