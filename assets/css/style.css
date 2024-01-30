@@ -12,14 +12,21 @@
 body {
     min-height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     color: #3a3a3a;
     font-family: 'Roboto', sans-serif;
-
 }
 
 header {
     background-color: lightcyan;
+}
+
+#header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,
@@ -29,11 +36,19 @@ h3 {
 }
 
 main {
-    background-color: yellow;
+    background-color: white;
     /* Keeps page structure so main element takes up most of the space */
     flex: 1 0 auto;
 }
 
+#game-rules {
+    background-color: whitesmoke;
+}
+
 footer {
-    background-color: orange;
+    background-color: white;
+}
+
+.show {
+    display: inline-block
 }

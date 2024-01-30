@@ -33,11 +33,11 @@
 
   <body>
     <header>
-    <h1>Welcome to FizzBuzz</h1>
+    <h1 id="header-text">Welcome to FizzBuzz!</h1>
     </header>
     <main>
-    <div id="game-intro">
-        <h2>How to play</h2>
+        <div onclick="myFunction()"><p>How to Play</p>
+        <div id="how-to-play" class="show">
         <ul>
             <li>Generate a pair of numbers between 2 and 9: Fizz and Buzz</li>
                 <ul>
@@ -62,8 +62,7 @@
             <li>Anything else: 0 points</li>
         </ul>
         </p>
-
-        
+        <br/>
         <h3>Example Game</h3>
         <p>In this example game, Fizz = 3, Buzz = 5
            <ul>         
@@ -74,9 +73,13 @@
             </ul>
         </p>
         </div>
+        </section>
+        </div>
+        </div>
     </div>
 
-    <div><h2>Play the game</h2></div>
+    <br />
+    <div><h3>Play the game</h3></div>
     <p>Click here to generate your Fizz and Buzz numbers and start the game!</p>
     <p>Fizz: ____ </p>
     <p>Buzz: ____ </p>
@@ -105,5 +108,6 @@
             </div>
 
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
