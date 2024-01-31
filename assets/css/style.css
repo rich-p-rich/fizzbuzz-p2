@@ -49,6 +49,6 @@ footer {
     background-color: white;
 }
 
-.show {
-    display: inline-block
+.hide {
+    display: none;
 }

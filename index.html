@@ -1,90 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Meta tags for search engines-->
-    <meta name ="description" content="FizzBuzz. Online maths and counting game, mobile game, desktop game."> 
-    <meta name ="keywords" content="FizzBuzz, maths, maths practice, maths practice for kids, division practice"
-    <title></title>
+    <meta name="description" content="FizzBuzz. Online maths and counting game, mobile game, desktop game.">
+    <meta name="keywords" content="FizzBuzz, maths, maths practice, maths practice for kids, division practice" <title>
+    </title>
     <!--Favicon-->
     <!--Favicon picture credit: Pexels.com, user Black Ice, image nr 1314543 -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
     <!--CSS stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.css"/>
-   </head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-  <body>
+<body>
     <header>
-    <h1 id="header-text">Welcome to FizzBuzz!</h1>
+        <h1 id="header-text">Welcome to FizzBuzz!</h1>
     </header>
     <main>
-    <div id="how-to-play">How to Play</div>
-      <div id="game-rules"><p>Rules of the Game</p>
-           <ul>
-            <li>Generate a pair of numbers between 2 and 9: Fizz and Buzz</li>
+        <button id="how-to-play">How to Play</button>
+        <div id="game-rules" class="hide">
+            <ul>
+                <li>Generate a pair of numbers between 2 and 9: Fizz and Buzz</li>
                 <ul>
                     <li>The two numbers Fizz and Buzz will not be the same as each other</li>
                     <li>Fizz and Buzz remain for duration of the game</li>
                 </ul>
-            <li>Generate a set of target numbers between 10 and 100</li>
-            <li>Work out whether your Target Number can be divided by:
+                <li>Generate a set of target numbers between 10 and 100</li>
+                <li>Work out whether your Target Number can be divided by:
                     <ul>
-                    <li>Fizz</li>
-                    <li>Buzz</li>
-                    <li>Neither number</li>
-                    <li>Or both numbers, in which case it's FizzBuzz!</li>
+                        <li>Fizz</li>
+                        <li>Buzz</li>
+                        <li>Neither number</li>
+                        <li>Or both numbers, in which case it's FizzBuzz!</li>
                     </ul>
-        </ul>
-
-        <h3>Scoring system</h3>
-        <ul>
-            <li>If you tap Fizz, Buzz or No! correctly: 1 point</li>
-            <li>If you tap Fizz or Buzz when the answer was FizzBuzz: 1 point</li>
-            <li>If you tap FizzBuzz correctly: 2 points</li>
-            <li>Anything else: 0 points</li>
-        </ul>
-        <br/>
-        <h3>Example Game</h3>
-        <p>In this example game, Fizz = 3, Buzz = 5
-           <ul>         
-            <li>Your first Target Number = 6: you tap Fizz</li>
-            <li>Your next Target Number = 10: you tap Buzz</li>
-            <li>The next Target Number = 13: you tap No!</li>
-            <li>The next Target Number = 15: you tap FizzBuzz</li>
             </ul>
-        </p>
+
+            <h3>Scoring system</h3>
+            <ul>
+                <li>If you tap Fizz, Buzz or No! correctly: 1 point</li>
+                <li>If you tap Fizz or Buzz when the answer was FizzBuzz: 1 point</li>
+                <li>If you tap FizzBuzz correctly: 2 points</li>
+                <li>Anything else: 0 points</li>
+            </ul>
+            <br />
+            <h3>Example Game</h3>
+            <p>In this example game, Fizz = 3, Buzz = 5
+            <ul>
+                <li>Your first Target Number = 6: you tap Fizz</li>
+                <li>Your next Target Number = 10: you tap Buzz</li>
+                <li>The next Target Number = 13: you tap No!</li>
+                <li>The next Target Number = 15: you tap FizzBuzz</li>
+            </ul>
+            </p>
         </div>
-    </div>
-    </div>
+        </div>
+        </div>
+        <br />
+        <br />
+        <div>
+            <h3>Play the game</h3>
+        </div>
+        <p>Click here to generate your Fizz and Buzz numbers and start the game!</p>
+        <p>Fizz: ____ </p>
+        <p>Buzz: ____ </p>
+        <br />
+        <p>Click here to start your series of Target Numbers</p>
+        <p>Target Number: _____ </p>
 
-    <br />
-    <div><h3>Play the game</h3></div>
-    <p>Click here to generate your Fizz and Buzz numbers and start the game!</p>
-    <p>Fizz: ____ </p>
-    <p>Buzz: ____ </p>
-
-    <p>Click here to start your series of Target Numbers</p>
-    <p>Target Number: _____ </p>
-
-    <p>
+        <p>
         <ul>
             <li>Fizz</li>
             <li>Buzz</li>
@@ -92,19 +81,20 @@
             <li>FizzBuzz</li>
         </ul>
 
-    </p>
+        </p>
 
-    <div>Your Score: _____
-    </div>
-    
+        <div>Your Score: _____
+        </div>
+
 
     </main>
     <footer>
-        	<div>
-                <p>footer</p>
-            </div>
+        <div>
+            <p>footer</p>
+        </div>
 
     </footer>
-    <script src="script.js"></script>
-  </body>
+    <script src="assets/js/script.js"></script>
+</body>
+
 </html>
