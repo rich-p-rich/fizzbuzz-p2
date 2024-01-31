@@ -16,6 +16,6 @@ function readyFizzBuzz() {
 // generate the sequence of Target numbers //
 document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers);
 function setTargetNumbers () {
-    TargetNumbers = Math.random () * 10; 
+    TargetNumbers = Math.floor(Math.random()*100) + 3; 
     document.getElementById("target-number").innerHTML = TargetNumbers; 
 }
