@@ -4,7 +4,4 @@ function myFunction() {
     document.getElementById("game-rules").classList.toggle("show");
 }
 
-
-function myFunction() {
-    document.getElementById("how-to-play").classList.toggle("show");
-}
+let randomNum = Math.floor((Math.random() * 10) + 1);
