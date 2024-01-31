@@ -14,3 +14,7 @@ function readyFizzBuzz() {
 }
 
 // generate the sequence of Target numbers //
+document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers);
+function setTargetNumbers () {
+    
+}
