@@ -6,7 +6,9 @@ function myFunction() {
 }
 
 // generate the Fizz and Buzz numbers //
-function Random() {
-    var rnd = Math.floor(Math.random() * 8) + 2;
-    document.getElementById('tb').value = rnd;
+function myFunction() {
+    FizzNumber = Math.floor(Math.random() * 8) + 2;
+    document.getElementById("fizz-number").innerHTML = FizzNumber;
+    BuzzNumber = Math.floor(Math.random() * 8) + 2;
+    document.getElementById("buzz-number").innerHTML = BuzzNumber;
 }
