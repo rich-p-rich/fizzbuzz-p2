@@ -22,7 +22,7 @@ function setTargetNumbers () {
 
 //calculate the correct answer//
 if (TargetNumbers % FizzNumber === 0) {
-    document.getElementById("checkbox").innerText = "Fizz";
+    document.getElementById("checkbox").innerText = "Buzz";
 }
 
 if (TargetNumbers % BuzzNumber === 0) {
@@ -33,5 +33,10 @@ if (TargetNumbers % FizzNumber === 0 && targetNumber % BuzzNumber === 0) {
     document.getElementById("checkbox").innerText = "FizzBuzz";
 }
 else {
-    document.getElementById("result").innerText = "No!";
+    document.getElementById("checkbox").innerText = "No!";
   }
+
+  //check user answer against correct answer calculated above //
+function checkAnswer () {
+let userAnswer = 
+}
