@@ -20,3 +20,18 @@ function setTargetNumbers () {
     document.getElementById("target-number").innerHTML = TargetNumbers; 
 }
 
+//calculate the correct answer//
+if (TargetNumbers % FizzNumber === 0) {
+    document.getElementById("checkbox").innerText = "Fizz";
+}
+
+if (TargetNumbers % BuzzNumber === 0) {
+    document.getElementById("checkbox").innerText = "Buzz";
+}
+
+if (TargetNumbers % FizzNumber === 0 && targetNumber % BuzzNumber === 0) {
+    document.getElementById("checkbox").innerText = "FizzBuzz";
+}
+else {
+    document.getElementById("result").innerText = "No!";
+  }
