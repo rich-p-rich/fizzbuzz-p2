@@ -7,7 +7,6 @@ function showHideGameplay() {
 // conditions to ensure the FizzBuzz numbers are between 2 and 9, and cannot be the same //
 document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuzz);
 document.getElementById("ready-fizzbuzz").min = "2", max = "9";
-document.getElementById("ready-fizzbuzz").max = "9";
 
 // generate the Fizz and Buzz numbers //
 function readyFizzBuzz() {
@@ -15,10 +14,15 @@ function readyFizzBuzz() {
     document.getElementById("fizz-number").innerHTML = FizzNumber;
     BuzzNumber = Math.floor(Math.random() * 8) + 2;
     document.getElementById("buzz-number").innerHTML = BuzzNumber;
+    // ensures the Fizz and Buzz numbers are not the same//
+    if (BuzzNumber === FizzNumber) {
+        BuzzNumber = Math.floor(Math.random() * 9) + 2;
+    } 
 }
 
 // generate the sequence of Target numbers //
 document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers);
+document.getElementById("target-number").min = "10", max = "99";
 function setTargetNumbers () {
     TargetNumbers = Math.floor(Math.random()*100) + 3; 
     document.getElementById("target-number").innerHTML = TargetNumbers; 
