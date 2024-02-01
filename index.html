@@ -75,15 +75,17 @@
         <button id="set-target-numbers">Set your Target Numbers</button>
         <p>Target Number: <span id="target-number"></span></p> 
         
-        <div class="checkbox">
-            <label>Fizz: <input type="checkbox" name="Fizz">
-            </label>
-            <label>Buzz: <input type="checkbox" name="Buzz">
-            </label>
-            <label>No!: <input type="checkbox" name="No!">
-            </label>
-            <label>FizzBuzz: <input type="checkbox" name="FizzBuzz">
-            </label>
+        <!--User inputs answers via the multiple choice checkbox-->
+
+        <div class="user-answers">
+            <label>Fizz: <input type="checkbox" name="checkbox-answer" input id="answerFizz" value="Fizz" onclick="selectOnlyThis(this)"/> 
+                </label>
+            <label>Buzz: <input type="checkbox" name="checkbox-answer" input id="answerBuzz" value="Buzz" onclick="selectOnlyThis(this)"/> 
+                </label>
+            <label>No!: <input type="checkbox" name="checkbox-answer" input id="answerNo" value="No" onclick="selectOnlyThis(this)"/> 
+                </label>
+            <label>FizzBuzz: <input type="checkbox" name="checkbox-answer" input id="answerFizzBuzz" value="FizzBuzz" onclick="selectOnlyThis(this)"/> 
+                </label>
         </div>
 
         </p>
