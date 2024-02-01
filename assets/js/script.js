@@ -19,3 +19,4 @@ function setTargetNumbers () {
     TargetNumbers = Math.floor(Math.random()*100) + 3; 
     document.getElementById("target-number").innerHTML = TargetNumbers; 
 }
+
