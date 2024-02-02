@@ -1,12 +1,6 @@
 // Set up order of operations (load DOM then game); add event listeners to the buttons //
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            let gameType = this.getAttribute("data-type");
-            alert(`You clicked ${gameType}`);
-        });
-    }    
+    let answerButtons = document.querySelectorAll("answer-buttons");
 })
 
 // show / hide the 'How the games works' section //
@@ -50,7 +44,7 @@ if (targetNumber % fizzNumber === 0) {
     correctAnswer = "Fizz";
 } else if (targetNumber % buzzNumber === 0) {
     correctAnswer = "Buzz";
-} else if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0 && targetNumber % fizzBuzz !== 0) {
+} else if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0) {
     correctAnswer = "No!";
 } else if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
     correctAnswer = "FizzBuzz";
@@ -58,17 +52,40 @@ if (targetNumber % fizzNumber === 0) {
 }
 
 //read answer from user based on button click//
-document.getElementById("fizz-btn").addEventListener("click", function() {checkUserAnswer("Fizz");});
-document.getElementById("buzz-btn").addEventListener("click", function() {checkUserAnswer("Buzz");});
-document.getElementById("no-btn").addEventListener("click", function() {checkUserAnswer("No!");});
-document.getElementById("fizzbuzz-btn").addEventListener("click", function() {checkUserAnswer("FizzBuzz");});
-
-//check user answer against calculatedCorrectAnswer// 
-function checkUserAnswer (userAnswer) {
-    let correctAnswer = calculateCorrectAnswer();
-    if (userAnswer === correctAnswer) {
-        displayResult("Correct!")
-    } else {
-        displayResult("Incorrect")
+function userInputAnswer () {
+    document.getElementById("fizz-btn").addEventListener("click", function() {
+        userInputAnswer("Fizz");
+      });
+      
+      document.getElementById("buzz-btn").addEventListener("click", function() {
+        userInputAnswer("Buzz");
+      });
+      
+      document.getElementById("no-btn").addEventListener("click", function() {
+        userInputAnswer("No!");
+      });
+      
+      document.getElementById("fizzbuzz-btn").addEventListener("click", function() {
+        userInputAnswer("FizzBuzz");
+      });
     }
+
+// Check user answer against calculatedCorrectAnswer
+let correctAnswer = calculateCorrectAnswer();
+let userAnswer = userInputAnswer();
+
+let result = 
+function(){
+if (correctAnswer === userAnswer) {
+  displayResult("Correct!");
+} else {
+  displayResult("Incorrect");
 }
+}
+
+// Display the result in the element with id "result"
+function displayResult() {
+    document.getElementById("display-result").innerText = ("result");
+  }
+
+
