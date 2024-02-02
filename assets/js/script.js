@@ -37,51 +37,44 @@ function selectOnlyThis(id){
     id.checked = true;
   }
 
-//calculate the correct answer and check user input//
-function checkAnswer () {
-        let userAnswer = parseInt(document.getElementsByName("checkbox-answer").checked);    
-        let checkedAnswer = calculateCorrectAnswer();
-        let isCorrect = userAnswer === calculatedAnswer[0];
-
-    if (isCorrect) {
-        alert("Correct!");
-    } else {
-        alert("Incorrect!")
-    }
-
-    runGame(calculatedAnswer[1]);
-}
-    
 //checks what the right answer should be// 
+function calculateCorrectAnswer() { 
+let targetNumber = parseInt(document.getElementById("target-number").value);
+let fizzNumber = document.getElementById(fizz-number).value;
+let buzzNumber = document.getElementById(buzz-number).value;
 
-function calculateCorrectAnswer() {
+let correctAnswer = "";
+if (targetNumber % fizzNumber === 0) {
+    correctAnswer = "Fizz";
+} else if (targetNumber % buzzNumber === 0) {
+    correctAnswer = "Buzz";
+} else if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0 && targetNumber % fizzBuzz !== 0) {
+    correctAnswer = "No!";
+} else if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
+    correctAnswer = "FizzBuzz";
+}
+}
 
-    let TargetNumbers = document.getElementById("target-number").value;
-        TargetNumbers = parseInt (TargetNumbers);
-
-        let fizzCheckbox = document.getElementById("answerFizz").checked;
-        let buzzCheckbox = document.getElementById("answerBuzz").checked;
-        let noCheckedbox = document.getElementById("answerNo").checked;
-        let fizzBuzzCheckbox = document.getElementById("answerFizzBuzz").checked;
-
-    if (fizzCheckbox) {
-        if (targetNumber % fizzNumber === 0) {
-            document.getElementById("answerFizz").innerText = "Correct!";
-        } }
-
-    if (buzzCheckbox) {
-        if (targetNumber % buzzNumber === 0) {
-            document.getElementById("answerBuzz").innerText = "Correct!";
-        }  }       
-        
-    if (noCheckedbox) {
-        if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0 && targetNumber % fizzBuzz !== 0) {
-                document.getElementById("answerNo").innerText = "Correct!";
-            } }
+//checks user answer// 
+document.addEventListener(function() {
+let answerCheckbox = document.getElementsByTagName("answer-checkbox");
+   for (let answerCheckbox of answerCheckboxes) {
+        answerCheckbox.addEventListener("click", function() 
+        if (this.getAttribute("data-type")))
+    }
     
-    if (fizzBuzzCheckbox) {
-        if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
-                    document.getElementById("answerFizzBuzz").innerText = "Correct!";
-            }                  
-    }
-    }
+}
+
+let userAnswer = document.querySelector(input[checkbox-answer]).addEventListener("click".checked);
+if (userAnswer && userAnswer.value === correctAnswer) {
+    document.getElementById("result").innerText = "Correct!"
+} else {document.getElementById("result").innerText = "Incorrect!"
+}
+
+//generate next target number//
+document.getElementById("next-target-numbers").addEventListener("click", nextTargetNumbers);
+document.getElementById("next-target-number").min = "10", max = "99";
+function nextTargetNumbers () {
+    TargetNumbers = Math.floor(Math.random()*100) + 3; 
+    document.getElementById("next-target-number").innerHTML = NextTargetNumbers; 
+}

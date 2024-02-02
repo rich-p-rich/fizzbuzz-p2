@@ -23,6 +23,7 @@
         <h1 id="header-text">Welcome to FizzBuzz!</h1>
     </header>
     <main>
+        <br>
         <button id="how-to-play">How to Play</button>
         <div id="game-rules" class="hide">
             <ul>
@@ -64,33 +65,43 @@
         <br />
         <br />
         <div>
-        <h3>Play the game</h3>
+        <h3>Play The Game</h3>
+        <br>
         <!--Generate the Fizz and Buzz Numbers-->   
         <button id="ready-fizzbuzz">Ready FizzBuzz</button>
+        <br>
+        <br>
         <p>Fizz: <span id="fizz-number"></span></p>
         <p>Buzz: <span id="buzz-number"></span></p>
 
         <!--Generate the Target Numbers-->
         <br />
         <button id="set-target-numbers">Set your Target Numbers</button>
+        <br>
+        <br>
         <p>Target Number: <span id="target-number"></span></p> 
-        
+        <br>    
         <!--User inputs answers via the multiple choice checkbox-->
 
-        <div class="user-answers">
-            <label>Fizz: <input type="checkbox" name="checkbox-answer" input id="answerFizz" value="Fizz" onclick="selectOnlyThis(this)"/> 
-                </label>
-            <label>Buzz: <input type="checkbox" name="checkbox-answer" input id="answerBuzz" value="Buzz" onclick="selectOnlyThis(this)"/> 
-                </label>
-            <label>No!: <input type="checkbox" name="checkbox-answer" input id="answerNo" value="No" onclick="selectOnlyThis(this)"/> 
-                </label>
-            <label>FizzBuzz: <input type="checkbox" name="checkbox-answer" input id="answerFizzBuzz" value="FizzBuzz" onclick="selectOnlyThis(this)"/> 
-                </label>
+        <div id="user-answers">
+            <button class="btn btn--big btn--green">Fizz
+            </button>
+            <button class="btn btn--big btn--blue">Buzz
+            </button>
+            <button class="btn btn--big btn--red">No!
+            </button>
+            <button class="btn btn--big btn--yellow">FizzBuzz
+            </button>
         </div>
-
-        </p>
-
-        <div>Your Score: _____
+        <br>
+        <div id="result">
+            <p>Your answer was </p>
+        </div>
+        <br>
+        <button id="next-target-number">Next Target Number</button>
+        <br>    
+        <br>
+        <div id="score">Your Score: _____
         </div>
 
         </div>
