@@ -1,3 +1,4 @@
+// Set up order of operations (load DOM then game); add event listeners to the buttons //
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -38,20 +39,11 @@ function setTargetNumbers () {
     document.getElementById("target-number").innerHTML = TargetNumbers; 
 }
 
-//allow only one answer in the answer checkbox//
-function selectOnlyThis(id){
-    var myCheckboxAnswer = document.getElementsByName("checkbox-answer");
-    Array.prototype.forEach.call(myCheckboxAnswer,function(el){
-      el.checked = false;
-    });
-    id.checked = true;
-  }
-
-//checks what the right answer should be// 
+//check what the right answer should be// 
 function calculateCorrectAnswer() { 
 let targetNumber = parseInt(document.getElementById("target-number").value);
-let fizzNumber = document.getElementById(fizz-number).value;
-let buzzNumber = document.getElementById(buzz-number).value;
+let fizzNumber = document.getElementById("fizz-number").value;
+let buzzNumber = document.getElementById("buzz-number").value;
 
 let correctAnswer = "";
 if (targetNumber % fizzNumber === 0) {
@@ -65,26 +57,18 @@ if (targetNumber % fizzNumber === 0) {
 }
 }
 
-//checks user answer// 
-document.addEventListener(function() {
-let answerCheckbox = document.getElementsByTagName("answer-checkbox");
-   for (let answerCheckbox of answerCheckboxes) {
-        answerCheckbox.addEventListener("click", function() 
-        if (this.getAttribute("data-type")))
+//read answer from user based on button click//
+document.getElementById("fizz-btn").addEventListener("click", function() {checkUserAnswer("Fizz");});
+document.getElementById("buzz-btn").addEventListener("click", function() {checkUserAnswer("Buzz");});
+document.getElementById("no-btn").addEventListener("click", function() {checkUserAnswer("No!");});
+document.getElementById("fizzbuzz-btn").addEventListener("click", function() {checkUserAnswer("FizzBuzz");});
+
+//check user answer against calculatedCorrectAnswer// 
+function checkUserAnswer (userAnswer) {
+    let correctAnswer = calculateCorrectAnswer();
+    if (userAnswer === correctAnswer) {
+        displayResult("Correct!")
+    } else {
+        displayResult("Incorrect")
     }
-    
-}
-
-let userAnswer = document.querySelector(input[checkbox-answer]).addEventListener("click".checked);
-if (userAnswer && userAnswer.value === correctAnswer) {
-    document.getElementById("result").innerText = "Correct!"
-} else {document.getElementById("result").innerText = "Incorrect!"
-}
-
-//generate next target number//
-document.getElementById("next-target-numbers").addEventListener("click", nextTargetNumbers);
-document.getElementById("next-target-number").min = "10", max = "99";
-function nextTargetNumbers () {
-    TargetNumbers = Math.floor(Math.random()*100) + 3; 
-    document.getElementById("next-target-number").innerHTML = NextTargetNumbers; 
 }
