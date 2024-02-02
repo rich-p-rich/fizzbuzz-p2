@@ -70,7 +70,7 @@ function userInputAnswer () {
       });
     }
 
-// Check user answer against calculatedCorrectAnswer
+// Check user answer against calculatedCorrectAnswer //
 let correctAnswer = calculateCorrectAnswer();
 let userAnswer = userInputAnswer();
 
@@ -83,9 +83,15 @@ if (correctAnswer === userAnswer) {
 }
 }
 
-// Display the result in the element with id "result"
+// Display the result in the element with id "result" //
 function displayResult() {
     document.getElementById("display-result").innerText = ("result");
   }
 
-
+// Get new target number to continue the game //
+document.getElementById("next-target-number").addEventListener("click", setTargetNumbers);
+document.getElementById("next-target-number").min = "10", max = "99";
+function setNewTargetNumber () {
+    TargetNumbers = Math.floor(Math.random()*100) + 3; 
+    document.getElementById("next-target-number").innerHTML = TargetNumbers;
+}
