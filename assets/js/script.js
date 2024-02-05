@@ -1,6 +1,6 @@
 // Set up order of operations (load DOM then game); add event listeners to the buttons //
 document.addEventListener("DOMContentLoaded", function () {
-  let answerButtons = document.querySelectorAll("answer-buttons");
+  let answerButtons = document.querySelectorAll(".answer-buttons");
 })
 
 // show / hide the 'How the games works' section //
@@ -14,14 +14,15 @@ document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuz
 document.getElementById("ready-fizzbuzz").min = "2", max = "9";
 
 // generate the Fizz and Buzz numbers //
+// ensure the Fizz and Buzz numbers are not the same//
 function readyFizzBuzz() {
   FizzNumber = Math.floor(Math.random() * 8) + 2;
-  document.getElementById("fizz-number").innerHTML = FizzNumber;
-  // ensures the Fizz and Buzz numbers are not the same//
-  do { 
+  document.getElementById("fizz-number").innerText = FizzNumber;
+   do { 
     BuzzNumber = Math.floor(Math.random() * 8) + 2;
   } while (BuzzNumber === FizzNumber) {
-    document.getElementById("buzz-number").innerHTML = BuzzNumber;
+    document.getElementById("buzz-number").innerText = BuzzNumber;
+}
 }
 
 // generate the sequence of Target numbers //
@@ -29,26 +30,27 @@ document.getElementById("set-target-numbers").addEventListener("click", setTarge
 document.getElementById("target-number").min = "10", max = "99";
 function setTargetNumbers() {
   clearResult();
-  TargetNumbers = Math.floor(Math.random() * 100) + 3;
-  document.getElementById("target-number").innerHTML = TargetNumbers;
+  TargetNumbers = Math.floor(Math.random() * 100) + 1;
+  document.getElementById("target-number").innerText = TargetNumbers;
 }
 
+// clear the answer field with 'new target number' //
 function clearResult() {
   document.getElementById("display-result").innerText = "";
 };
 
 //check what the right answer should be// 
 function calculateCorrectAnswer() {
-  let targetNumber = parseInt(document.getElementById("target-number").value);
-  let fizzNumber = document.getElementById("fizz-number").value;
-  let buzzNumber = document.getElementById("buzz-number").value;
+  let targetNumber = parseInt(document.getElementById("target-number").innerText);
+  let fizzNumber = parseInt(document.getElementById("fizz-number").innerText);
+  let buzzNumber = parseInt(document.getElementById("buzz-number").innerText);
 
   let correctAnswer = "";
-  if (targetNumber % fizzNumber === 0) {
+  if (targetNumber % fizzNumber == 0) {
     correctAnswer = "Fizz";
   } else if (targetNumber % buzzNumber === 0) {
     correctAnswer = "Buzz";
-  } else if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0) {
+  } else if (targetNumber % fizzNumber !=== 0 && targetNumber % buzzNumber !== 0) {
     correctAnswer = "No!";
   } else if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
     correctAnswer = "FizzBuzz";
@@ -70,14 +72,14 @@ let userAnswer = userInputAnswer();
 
 let result =
   function () {
-    let output = ""
+    let output = "";
     if (answer === userAnswer) {
       output = "Correct!"
     } else {
       output = "Incorrect!"
     }
     return output;
-  }
+  };
 
 //read answer from user's button click//
 function userInputAnswer() {
