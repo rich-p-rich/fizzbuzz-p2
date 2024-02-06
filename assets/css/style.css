@@ -41,12 +41,40 @@ main {
     flex: 1 0 auto;
 }
 
-#game-rules {
-    background-color: whitesmoke;
+#click-for-rules {
+    background-color: #038052;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
 }
 
+#game-rules {
+    padding: 1em;
+    background-color: mintcream;
+    line-height: 1.5;
+}
+
+#ready-fizzbuzz {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+#set-target-numbers {
+    background-color: rgb(255, 6, 6) ; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+
+
 footer {
-    background-color: white;
+    background-color: rgb(51, 28, 28);
 }
 
 .hide {
