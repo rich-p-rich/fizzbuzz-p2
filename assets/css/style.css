@@ -15,12 +15,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #3a3a3a;
+    color: #020202;
     font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-color: lightcyan;
+    width: 100%;
+    background-color: yellow;
+    padding: 0.5em;
+    text-align: center;
 }
 
 #header-text {
@@ -36,7 +39,12 @@ h3 {
 }
 
 main {
-    background-color: white;
+    background-color: lightcyan;
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    align-items: center;
+    text-align: center;
     /* Keeps page structure so main element takes up most of the space */
     flex: 1 0 auto;
 }
@@ -64,14 +72,50 @@ main {
 }
 
 #set-target-numbers {
-    background-color: rgb(255, 6, 6) ; 
+    background-color: rgb(255, 6, 6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+#fizz-btn {
+    background-color: rgb(11, 11, 235);
     color: white;
     border: none;
     border-radius: 12px;
     width: fit-content;
 }
 
+#buzz-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+}
 
+#no-btn {
+    background-color: rgb(24, 134, 24);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+#fizzbuzz-btn {
+    background-color: rgb(132, 23, 196);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+#next-target-number {
+    background-color: rgb(255, 6, 6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
 
 footer {
     background-color: rgb(51, 28, 28);

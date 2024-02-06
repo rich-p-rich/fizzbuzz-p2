@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 // toggle between 'show' and 'hide' for the 'How the games works' section
-document.getElementById("how-to-play").addEventListener("click", showHideGameplay);
+document.getElementById("click-for-rules").addEventListener("click", showHideGameplay);
 function showHideGameplay() {
   document.getElementById("game-rules").classList.toggle("hide");
 }
