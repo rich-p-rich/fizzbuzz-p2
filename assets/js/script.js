@@ -112,3 +112,7 @@ function getUserAnswer(evt) {
     }
   }
 }
+
+// Get new target number to continue the game
+parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
+document.getElementById("next-target-number").min = "10", max = "99";

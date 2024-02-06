@@ -49,20 +49,31 @@ main {
     flex: 1 0 auto;
 }
 
-#click-for-rules {
-    background-color: red;
-    color: white;
+.structure-btn {
     border: none;
     border-radius: 12px;  
-    width: 125px;
+    width: 150px;
     font-size: 20px;
     padding: 7.5px 16px;
 }
 
+/*.answer-btns {
+    border: none;
+    border-radius: 12px;  
+    width: 75px;
+    font-size: 16px;
+    padding: 4px 8px;
+    align: center;
+}*/
+
+#click-for-rules {
+    background-color: red;
+    color: white; 
+}
+
 #game-rules {
     padding: 1em;
-    align-items: center;
-    width: 50%;
+    width: 75%;
     background-color: lightcyan;
     line-height: 1.5;
     text-align: center;
@@ -72,22 +83,11 @@ main {
 #ready-fizzbuzz {
     background-color: blue;
     color: white;
-    border: none;
-    border-radius: 12px;
-    width: 125px;
-    font-size: 20px;
-    font-size: 20px;
-    padding: 7.5px 16px;
 }
 
 #set-target-numbers {
     background-color: green;
     color: white;
-    border: none;
-    border-radius: 12px;
-    width: 125px;
-    font-size: 20px;
-    padding: 7.5px 16px;
 }
 
 #fizz-btn {
@@ -133,11 +133,6 @@ main {
 #next-target-number {
     background-color: green;
     color: white;
-    border: none;
-    border-radius: 12px;
-    width: 125px;
-    font-size: 20px;
-    padding: 7.5px 16px;
 }
 
 footer {
