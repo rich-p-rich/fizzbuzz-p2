@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
 
 h1,
 h2,
@@ -39,7 +39,7 @@ h3 {
 }
 
 main {
-    background-color: lightcyan;
+    background-color: mintcream;
     height: 100%;
     width: 100%;
     padding: 1em;
@@ -50,17 +50,23 @@ main {
 }
 
 #click-for-rules {
-    background-color: #038052;
+    background-color: red;
     color: white;
     border: none;
-    border-radius: 12px;
-    width: fit-content;
+    border-radius: 12px;  
+    width: 125px;
+    font-size: 20px;
+    padding: 7.5px 16px;
 }
 
 #game-rules {
     padding: 1em;
-    background-color: mintcream;
+    align-items: center;
+    width: 50%;
+    background-color: lightcyan;
     line-height: 1.5;
+    text-align: center;
+    padding-left: 15px;
 }
 
 #ready-fizzbuzz {
@@ -68,14 +74,20 @@ main {
     color: white;
     border: none;
     border-radius: 12px;
-    width: fit-content;
+    width: 125px;
+    font-size: 20px;
+    font-size: 20px;
+    padding: 7.5px 16px;
 }
 
 #set-target-numbers {
-    background-color: rgb(255, 6, 6);
+    background-color: green;
     color: white;
     border: none;
     border-radius: 12px;
+    width: 125px;
+    font-size: 20px;
+    padding: 7.5px 16px;
 }
 
 #fizz-btn {
@@ -84,22 +96,28 @@ main {
     border: none;
     border-radius: 12px;
     width: fit-content;
+    font-size: 20px;
+    padding: 1%;
 }
 
 #buzz-btn {
+    background-color: rgb(0, 162, 255);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+    font-size: 20px;
+    padding: 1%;
+}
+
+#no-btn {
     background-color: orangered;
     color: white;
     border: none;
     border-radius: 12px;
     width: fit-content;
-}
-
-#no-btn {
-    background-color: rgb(24, 134, 24);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    width: fit-content;
+    font-size: 20px;
+    padding: 1%;
 }
 
 #fizzbuzz-btn {
@@ -108,13 +126,18 @@ main {
     border: none;
     border-radius: 12px;
     width: fit-content;
+    font-size: 20px;
+    padding: 1%;
 }
 
 #next-target-number {
-    background-color: rgb(255, 6, 6);
+    background-color: green;
     color: white;
     border: none;
     border-radius: 12px;
+    width: 125px;
+    font-size: 20px;
+    padding: 7.5px 16px;
 }
 
 footer {

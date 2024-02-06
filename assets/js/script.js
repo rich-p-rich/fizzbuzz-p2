@@ -75,31 +75,40 @@ function displayResult() {
   document.getElementById("display-result").innerText = output;
 }
 
-// Identify what the user answer is
-function getUserAnswer() {
-  if (document.getElementById("fizz-btn").checked) {
-    return Fizz;
-  } else if (document.getElementById("buzz-btn").checked) {
-    return Buzz;
-  } else if (document.getElementById("no-btn").checked) {
-    return No;
-  } else if (document.getElementById("fizzbuzz-btn").checked) {
-    return FizzBuzz;
-  } else {
-    return "";
+
+
+function getUserAnswer(evt) {
+  console.log(evt);
+  const theAnswer = correctAnswer();
+  if (evt !== null) {
+    if (evt.currentTarget.id === 'fizz-btn') {
+      //check if correct answer is Fizz
+      if (theAnswer === 'Fizz') {
+        document.getElementById("display-result").innerHTML = "Correct!"
+      } else {
+        document.getElementById("display-result").innerHTML = "Incorrect!"
+      }
+    } else if (evt.currentTarget.id === 'buzz-btn') {
+      //check if correct answer is Buzz
+      if (theAnswer === 'Buzz') {
+        document.getElementById("display-result").innerHTML = "Correct!"
+      } else {
+        document.getElementById("display-result").innerHTML = "Incorrect!"
+      }
+    } else if (evt.currentTarget.id === 'no-btn') {
+      //check if correct answer is No
+      if (theAnswer === 'No!') {
+        document.getElementById("display-result").innerHTML = "Correct!"
+      } else {
+        document.getElementById("display-result").innerHTML = "Incorrect!"
+      }
+    } else if (evt.currentTarget.id === 'fizzbuzz-btn') {
+      //check if correct answer is FizzBuzz
+      if (theAnswer === 'FizzBuzz') {
+        document.getElementById("display-result").innerHTML = "Correct!"
+      } else {
+        document.getElementById("display-result").innerHTML = "Incorrect!"
+      }
+    }
   }
-}
-// Get new target number to continue the game
-parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
-document.getElementById("next-target-number").min = "10", max = "99";
-
-// keep score - correct answers
-function scoreCorrect() {
-  let oldScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("correct-answers").innerText = ++oldScore;
-}
-
-function scoreIncorrect() {
-  let oldScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("incorrect-answers").innerText = ++oldScore;
 }
