@@ -49,6 +49,8 @@ main {
     flex: 1 0 auto;
 }
 
+/*Set general styles for the 'structure' buttons of show rules, set FizzBuzz and TargetNumbers*/
+
 .structure-btn {
     border: none;
     border-radius: 12px;  
@@ -56,15 +58,6 @@ main {
     font-size: 20px;
     padding: 7.5px 16px;
 }
-
-/*.answer-btns {
-    border: none;
-    border-radius: 12px;  
-    width: 75px;
-    font-size: 16px;
-    padding: 4px 8px;
-    align: center;
-}*/
 
 #click-for-rules {
     background-color: red;
@@ -93,6 +86,33 @@ main {
     background-color: rgb(24, 184, 24);
     color: white;
 }
+
+/*Set general styles for the answer buttons*/
+.answer-btns {
+    border: none;
+    border-radius: 12px;  
+    width: 150px;
+    font-size: 20px;
+    padding: 7.5px 16px;
+}
+
+/*Set flex styles for the answer buttons*/
+
+.button-container-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    gap: 20px;
+    row-gap: 20px;  
+    column-gap: 20px;
+}
+
+.button-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 
 #fizz-btn {
     background-color: rgb(11, 11, 235);
@@ -123,17 +143,6 @@ main {
     font-size: 20px;
     padding: 1%;
 }
-
-
-
-.button-container-1 {
-    display: flex;
-}
-
-.button-container-2 {
-    display: flex;
-}
-
 
 #fizzbuzz-btn {
     background-color: rgb(132, 23, 196);
