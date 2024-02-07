@@ -60,7 +60,7 @@ function correctAnswer() {
   return correctAnswer;
 }
 
-// Display the result based on user's answer
+/* Display the result based on user's answer
 function displayResult() {
   let userAnswer = getUserAnswer();
   let correct = correctAnswer();
@@ -73,8 +73,7 @@ function displayResult() {
     scoreIncorrect();
   }
   document.getElementById("display-result").innerText = output;
-}
-
+}*/
 
 
 function getUserAnswer(evt) {

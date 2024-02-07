@@ -71,13 +71,17 @@ main {
     color: white; 
 }
 
-#game-rules {
-    padding: 1em;
-    width: 75%;
+#game-rules * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: lightcyan;
     line-height: 1.5;
-    text-align: center;
-    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
 }
 
 #ready-fizzbuzz {
