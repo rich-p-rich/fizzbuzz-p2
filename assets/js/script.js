@@ -48,14 +48,14 @@ function correctAnswer() {
   let buzzNumber = parseInt(document.getElementById("buzz-number").innerText);
 
   let correctAnswer = "";
-  if (targetNumber % fizzNumber === 0) {
+  if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
+    correctAnswer = "FizzBuzz";
+  } else if (targetNumber % fizzNumber === 0) {
     correctAnswer = "Fizz";
   } else if (targetNumber % buzzNumber === 0) {
     correctAnswer = "Buzz";
   } else if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0) {
     correctAnswer = "No!";
-  } else if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
-    correctAnswer = "FizzBuzz";
   }
   return correctAnswer;
 }
@@ -80,9 +80,9 @@ function getUserAnswer(evt) {
   console.log(evt);
   const theAnswer = correctAnswer();
   if (evt !== null) {
-    if (evt.currentTarget.id === 'fizz-btn') {
-      //check if correct answer is Fizz
-      if (theAnswer === 'Fizz') {
+    if (evt.currentTarget.id === 'fizzbuzz-btn') {
+      //check if correct answer is FizzBuzz
+      if (theAnswer === 'FizzBuzz') {
         document.getElementById("display-result").innerHTML = "Correct!"
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!"
@@ -101,9 +101,9 @@ function getUserAnswer(evt) {
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!"
       }
-    } else if (evt.currentTarget.id === 'fizzbuzz-btn') {
-      //check if correct answer is FizzBuzz
-      if (theAnswer === 'FizzBuzz') {
+    } else if (evt.currentTarget.id === 'fizz-btn') {
+      //check if correct answer is Fizz
+      if (theAnswer === 'Fizz') {
         document.getElementById("display-result").innerHTML = "Correct!"
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!"
