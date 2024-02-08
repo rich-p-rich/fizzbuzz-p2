@@ -36,6 +36,18 @@ function setTargetNumbers() {
   }
 }
 
+//enable the Answer Buttons once the FizzBuzz and TargetNumbers are set 
+
+function enableAnswerButtons () {
+
+let answerButtons = document.querySelectorAll("answer-buttons");
+let readyFizzbuzz = document.querySelectorAll("ready-fizzbuzz");
+let setTargetNumbers = document.querySelectorAll("set-target-numbers");
+
+document.getElementById("answerButtons").disabled = false;
+
+}
+
 // clear the answer field with 'new target number'
 function clearResult() {
   document.getElementById("display-result").innerText = "";
@@ -59,22 +71,6 @@ function correctAnswer() {
   }
   return correctAnswer;
 }
-
-/* Display the result based on user's answer
-function displayResult() {
-  let userAnswer = getUserAnswer();
-  let correct = correctAnswer();
-  let output = "";
-  if (correct === userAnswer) {
-    output = "Correct!";
-    scoreCorrect();
-  } else {
-    output = "Incorrect!";
-    scoreIncorrect();
-  }
-  document.getElementById("display-result").innerText = output;
-}*/
-
 
 function getUserAnswer(evt) {
   console.log(evt);

@@ -67,7 +67,7 @@
         <div>
          <br>
         <!--Generate the Fizz and Buzz Numbers-->   
-        <button id="ready-fizzbuzz" class="structure-btn">Ready FizzBuzz</button>
+        <button id="ready-fizzbuzz" class="structure-btn" onclick="enableAnswerButtons()">Ready FizzBuzz</button>     
         <br>
         <br>
         <p>Fizz: <span id="fizz-number"></span></p>
@@ -75,7 +75,7 @@
 
         <!--Generate the Target Numbers-->
         <br />
-        <button id="set-target-numbers" class="structure-btn">Set Target Number</button>
+        <button id="set-target-numbers" class="structure-btn" onclick="enableAnswerButtons()">Set Target Number</button>
         <br>
         <br>
         <p>Target Number: <span id="target-number"></span></p> 
@@ -83,17 +83,17 @@
 
         <!--User inputs answers via the multiple choice buttons-->
         <div id="user-answers" class="answer-btns">
-            <button data-type="fizzbuzz" id="fizzbuzz-btn" onclick="getUserAnswer(event)">FizzBuzz
+            <div class="answer-btns-1"><button data-type="fizzbuzz" id="fizzbuzz-btn" disabled>FizzBuzz
             </button>
-            <button data-type="fizz" id="fizz-btn" onclick="getUserAnswer(event)">Fizz
+            <button data-type="fizz" id="fizz-btn" onclick="getUserAnswer(event)" disabled>Fizz
+            </button> </div> 
+            <div class="answer-btns-2"><button data-type="buzz" id="buzz-btn" onclick="getUserAnswer(event)" disabled>Buzz
             </button>
-            <button data-type="buzz" id="buzz-btn" onclick="getUserAnswer(event)">Buzz
-            </button>
-            <button data-type="no" id="no-btn"onclick="getUserAnswer(event)">No!
-            </button>
+            <button data-type="no" id="no-btn"onclick="getUserAnswer(event)" disabled>No!
+            </button></div> 
         </div>
         <br>
-
+        <br>
         <div id="result">
             <p>Your answer was <span id="display-result"></span></p>
                 </div>
