@@ -39,7 +39,7 @@ h3 {
 }
 
 main {
-    background-color: mintcream;
+    background-color: white; 
     height: 100%;
     width: 100%;
     padding: 1em;
@@ -52,6 +52,7 @@ main {
 /*Set general styles for the 'structure' buttons of show rules, set FizzBuzz and TargetNumbers*/
 
 .structure-btn {
+    cursor: pointer;
     border: none;
     border-radius: 12px;  
     width: 150px;
@@ -89,14 +90,16 @@ main {
 
 /*Set general styles for the answer buttons*/
 .answer-btns {
-    border: none;
-    border-radius: 12px;  
-    width: 150px;
-    font-size: 20px;
-    padding: 7.5px 16px;
+    display: block;
+    padding: 0 1em;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    border: 1px; 
 }
-
-/*Set flex styles for the answer buttons*/
+    
+/*Set flex styles for the answer buttons
 
 .button-container-1 {
     display: flex;
@@ -105,53 +108,56 @@ main {
     gap: 20px;
     row-gap: 20px;  
     column-gap: 20px;
-}
+} 
 
 .button-container-2 {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-
-#fizz-btn {
-    background-color: rgb(11, 11, 235);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    width: fit-content;
-    font-size: 20px;
-    padding: 1%;
-}
-
-#buzz-btn {
-    background-color: rgb(0, 162, 255);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    width: fit-content;
-    font-size: 20px;
-    padding: 1%;
-}
-
-#no-btn {
-    background-color: orangered;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    width: fit-content;
-    font-size: 20px;
-    padding: 1%;
-}
+    justify-content: space-around; 
+} */
 
 #fizzbuzz-btn {
+    cursor: pointer;
     background-color: rgb(132, 23, 196);
     color: white;
     border: none;
     border-radius: 12px;
     width: fit-content;
     font-size: 20px;
-    padding: 1%;
+    padding: 7.5px 16px;
+}
+
+#fizz-btn {
+    cursor: pointer;
+    background-color: rgb(11, 11, 235);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+    font-size: 20px;
+    padding: 7.5px 16px;
+}
+
+#buzz-btn {
+    cursor: pointer;
+    background-color: rgb(0, 162, 255);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+    font-size: 20px;
+    padding: 7.5px 16px;
+}
+
+#no-btn {
+    cursor: pointer;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: fit-content;
+    font-size: 20px;
+    padding: 7.5px 16px;
 }
 
 #next-target-number {
