@@ -109,16 +109,36 @@ function getUserAnswer(evt) {
   }
 }
 
+// Get new target number to continue the game
+parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
+function setTargetNumbers() {
+  {
+    clearResult();
+    TargetNumbers = Math.floor(Math.random() * 100) + 1;
+    parseInt(document.getElementById("target-number").innerText = TargetNumbers).TargetNumbers;
+  } while (TargetNumbers < 10) {
+    TargetNumbers = Math.floor(Math.random() * 100) + 1;
+    parseInt(document.getElementById("target-number").innerText = TargetNumbers);
+  }
+}
+
+// Keep score of correct and incorrect answers 
 function countCorrect () {
-  let oldSscore = parseInt(document.getElementById("correct-answers").innerText);
-  document.getElementById("correct-answers").innerText = ++oldSscore;
+  let oldScore = parseInt(document.getElementById("correct-answers").innerText);
+  document.getElementById("correct-answers").innerText = ++oldScore;
 }
 
 function countIncorrect () {
-  let oldSscore = parseInt(document.getElementById("incorrect-answers").innerText);
-  document.getElementById("incorrect-answers").innerText = ++oldSscore;
+  let oldScore = parseInt(document.getElementById("incorrect-answers").innerText);
+  document.getElementById("incorrect-answers").innerText = ++oldScore;
 }
 
-// Get new target number to continue the game
-parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
-document.getElementById("next-target-number").min = "10", max = "99";
+// Reset game with score to 0, new FizzBuzz and Target Numbers 
+
+function resetScore () {
+  clearResult();
+  let resetScore = 0; 
+  parseInt(document.getElementById("reset-scores").addEventListener("click", resetScore));
+  document.getElementById("score-correct").innerText = resetScore; 
+  document.getElementById("score-incorrect").innerText = resetScore;
+}
