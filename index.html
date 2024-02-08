@@ -25,7 +25,8 @@
     <main>
         <br>
         <button id="click-for-rules" class="structure-btn">Click for game rules</button>
-        <div id="game-rules" class="hide"></p>
+        <div id="game-rules" class="hide">
+            </p>
             <h3>Gameplay</h3>
             <ul>
                 <li>Generate a pair of numbers between 2 and 9: Fizz and Buzz</li>
@@ -65,46 +66,49 @@
         </div>
         <br />
         <div>
-         <br>
-        <!--Generate the Fizz and Buzz Numbers-->   
-        <button id="ready-fizzbuzz" class="structure-btn" onclick="enableAnswerButtons()">Ready FizzBuzz</button>     
-        <br>
-        <br>
-        <p>Fizz: <span id="fizz-number"></span></p>
-        <p>Buzz: <span id="buzz-number"></span></p>
+            <br>
+            <!--Generate the Fizz and Buzz Numbers-->
+            <button id="ready-fizzbuzz" class="structure-btn" input type="button" onclick="enableAnsBtns()">Ready FizzBuzz</button>
+            <br>
+            <br>
+            <p>Fizz: <span id="fizz-number"></span></p>
+            <p>Buzz: <span id="buzz-number"></span></p>
 
-        <!--Generate the Target Numbers-->
-        <br />
-        <button id="set-target-numbers" class="structure-btn" onclick="enableAnswerButtons()">Set Target Number</button>
-        <br>
-        <br>
-        <p>Target Number: <span id="target-number"></span></p> 
-        <br>    
+            <!--Generate the Target Numbers-->
+            <br />
+            <button id="set-target-numbers" class="structure-btn">Set Target Number</button>
+            <br>
+            <br>
+            <p>Target Number: <span id="target-number"></span></p>
+            <br>
 
-        <!--User inputs answers via the multiple choice buttons-->
-        <div id="user-answers" class="answer-btns">
-            <div class="answer-btns-1"><button data-type="fizzbuzz" id="fizzbuzz-btn" disabled>FizzBuzz
-            </button>
-            <button data-type="fizz" id="fizz-btn" onclick="getUserAnswer(event)" disabled>Fizz
-            </button> </div> 
-            <div class="answer-btns-2"><button data-type="buzz" id="buzz-btn" onclick="getUserAnswer(event)" disabled>Buzz
-            </button>
-            <button data-type="no" id="no-btn"onclick="getUserAnswer(event)" disabled>No!
-            </button></div> 
-        </div>
-        <br>
-        <br>
-        <div id="result">
-            <p>Your answer was <span id="display-result"></span></p>
+            <!--User inputs answers via the multiple choice buttons-->
+            <div id="user-answers" class="answer-btns">
+                <div class="button-container-1"> 
+                    <button data-type="fizzbuzz" id="fizzbuzz-btn" class="answerButtons" onclick="getUserAnswer(event)">FizzBuzz
+                    </button>
+                    <button data-type="fizz" id="fizz-btn" class="answerButtons" onclick="getUserAnswer(event)">Fizz
+                    </button>
                 </div>
-        <br>
-        <button type="button" onclick="nextTargetNumber()" id="next-target-number" class="structure-btn">Next Target Number</button>
-        <br>    
-        <br>
-        <div id="score">
-            <p>Correct answers: <span id="correct-answers"></span></p>
-            <p>Incorrect answers: <span id="incorrect-answers"></span></p>
-        </div>
+                <div class="button-container-2"><button data-type="buzz" id="buzz-btn" class="answerButtons" onclick="getUserAnswer(event)">Buzz
+                    </button>
+                    <button data-type="no" id="no-btn" class="answerButtons"  onclick="getUserAnswer(event)">No!
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div id="result">
+                <p>Your answer was <span id="display-result"></span></p>
+            </div>
+            <br>
+            <button type="button" onclick="nextTargetNumber()" id="next-target-number" class="structure-btn">Next Target
+                Number</button>
+            <br>
+            <br>
+            <div id="score">
+                <p>Correct answers: <span id="correct-answers">0</span></p>
+                <p>Incorrect answers: <span id="incorrect-answers">0</span></p>
+            </div>
 
         </div>
     </main>

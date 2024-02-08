@@ -89,14 +89,16 @@ main {
 }
 
 /*Set general styles for the answer buttons*/
-.answer-btns {
-    display: block;
-    padding: 0 1em;
-    text-align: center;
+.answer-btns {   
+    display: flex;
+    justify-content: center;
     align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    width: 70%;
+    border-radius: 5px;
+    margin: 20px auto;
     height: 50px;
-    width: auto;
-    border: 1px; 
 }
     
 /*Set flex styles for the answer buttons

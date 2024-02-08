@@ -36,22 +36,15 @@ function setTargetNumbers() {
   }
 }
 
-//enable the Answer Buttons once the FizzBuzz and TargetNumbers are set 
-
-function enableAnswerButtons () {
-
-let answerButtons = document.querySelectorAll("answer-buttons");
-let readyFizzbuzz = document.querySelectorAll("ready-fizzbuzz");
-let setTargetNumbers = document.querySelectorAll("set-target-numbers");
-
-document.getElementById("answerButtons").disabled = false;
-
-}
-
 // clear the answer field with 'new target number'
 function clearResult() {
   document.getElementById("display-result").innerText = "";
 };
+
+// enable user answer buttons after Ready FizzBuzz and Set TargetNumber are clicked 
+/*function enableAnsBtns() {
+  document.getElementByClassName("answerButtons").disabled = false;
+}*/
 
 // calculate the correct answer
 function correctAnswer() {
@@ -79,33 +72,51 @@ function getUserAnswer(evt) {
     if (evt.currentTarget.id === 'fizzbuzz-btn') {
       //check if correct answer is FizzBuzz
       if (theAnswer === 'FizzBuzz') {
-        document.getElementById("display-result").innerHTML = "Correct!"
+        document.getElementById("display-result").innerHTML = "Correct!";
+        countCorrect();
       } else {
-        document.getElementById("display-result").innerHTML = "Incorrect!"
+        document.getElementById("display-result").innerHTML = "Incorrect!";
+        countIncorrect();
       }
     } else if (evt.currentTarget.id === 'buzz-btn') {
       //check if correct answer is Buzz
       if (theAnswer === 'Buzz') {
-        document.getElementById("display-result").innerHTML = "Correct!"
+        document.getElementById("display-result").innerHTML = "Correct!";
+        countCorrect();
       } else {
-        document.getElementById("display-result").innerHTML = "Incorrect!"
+        document.getElementById("display-result").innerHTML = "Incorrect!";
+        countIncorrect();
       }
     } else if (evt.currentTarget.id === 'no-btn') {
       //check if correct answer is No
       if (theAnswer === 'No!') {
-        document.getElementById("display-result").innerHTML = "Correct!"
+        document.getElementById("display-result").innerHTML = "Correct!";
+        countCorrect();
       } else {
-        document.getElementById("display-result").innerHTML = "Incorrect!"
+        document.getElementById("display-result").innerHTML = "Incorrect!";
+        countIncorrect();
       }
     } else if (evt.currentTarget.id === 'fizz-btn') {
       //check if correct answer is Fizz
       if (theAnswer === 'Fizz') {
-        document.getElementById("display-result").innerHTML = "Correct!"
+        document.getElementById("display-result").innerHTML = "Correct!";
+        countCorrect();
       } else {
-        document.getElementById("display-result").innerHTML = "Incorrect!"
+        document.getElementById("display-result").innerHTML = "Incorrect!";
+        countIncorrect();
       }
     }
   }
+}
+
+function countCorrect () {
+  let oldSscore = parseInt(document.getElementById("correct-answers").innerText);
+  document.getElementById("correct-answers").innerText = ++oldSscore;
+}
+
+function countIncorrect () {
+  let oldSscore = parseInt(document.getElementById("incorrect-answers").innerText);
+  document.getElementById("incorrect-answers").innerText = ++oldSscore;
 }
 
 // Get new target number to continue the game
