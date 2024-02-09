@@ -1,3 +1,6 @@
+let btn1Ready = false;
+let btn2Ready = false;
+
 // Set up order of operations (load DOM then game); add event listeners to the buttons
 document.addEventListener("DOMContentLoaded", function () {
   let answerButtons = document.querySelectorAll(".answer-buttons");
@@ -14,6 +17,8 @@ parseInt(document.getElementById("ready-fizzbuzz").addEventListener("click", rea
 parseInt(document.getElementById("ready-fizzbuzz").min = "2", max = "9");
 
 // generate the Fizz and Buzz numbers and ensure they are not identical
+document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuzz);
+
 function readyFizzBuzz() {
   FizzNumber = Math.floor(Math.random() * 8) + 2;
   document.getElementById("fizz-number").innerText = FizzNumber;
@@ -21,30 +26,30 @@ function readyFizzBuzz() {
     BuzzNumber = Math.floor(Math.random() * 8) + 2;
   } while (BuzzNumber === FizzNumber);
   document.getElementById("buzz-number").innerText = BuzzNumber;
+  //set condition 1 of 2 to enable answer buttons (next is Target Number)
+  btn1Ready = true;
+  enableAnswerButtons()
 }
 
 // generate the sequence of Target numbers
-parseInt(document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers));
+document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers);
 function setTargetNumbers() {
-  {
-    clearResult();
+  clearResult();
+  do {
     TargetNumbers = Math.floor(Math.random() * 100) + 1;
-    parseInt(document.getElementById("target-number").innerText = TargetNumbers).TargetNumbers;
-  } while (TargetNumbers < 10) {
-    TargetNumbers = Math.floor(Math.random() * 100) + 1;
-    parseInt(document.getElementById("target-number").innerText = TargetNumbers);
-  }
+    document.getElementById("target-number").innerText = TargetNumbers;
+  } while (TargetNumbers < 10);
+  //set condition 2 of 2 to enable answer buttons (previous is Ready FizzBuzz)
+  btn2Ready = true;
+  enableAnswerButtons()
 }
 
-// clear the answer field with 'new target number'
-function clearResult() {
-  document.getElementById("display-result").innerText = "";
-};
-
-// enable user answer buttons after Ready FizzBuzz and Set TargetNumber are clicked 
-/*function enableAnsBtns() {
-  document.getElementByClassName("answerButtons").disabled = false;
-}*/
+// Reveal the answer buttons once FizzBuzzNumbers and Target Numbers are clicked
+function enableAnswerButtons() {
+  if (btn1Ready && btn2Ready) {
+    document.querySelector("#user-answers").style.display = 'flex'
+  } 
+}
 
 // calculate the correct answer
 function correctAnswer() {
@@ -65,6 +70,7 @@ function correctAnswer() {
   return correctAnswer;
 }
 
+//Check user answer against correct answer and display on-screen
 function getUserAnswer(evt) {
   console.log(evt);
   const theAnswer = correctAnswer();
@@ -109,8 +115,14 @@ function getUserAnswer(evt) {
   }
 }
 
+// clear the answer field with 'new target number'
+function clearResult() {
+  document.getElementById("display-result").innerText = "";
+};
+
+
 // Get new target number to continue the game
-parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
+/*parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
 function setTargetNumbers() {
   {
     clearResult();
@@ -120,25 +132,28 @@ function setTargetNumbers() {
     TargetNumbers = Math.floor(Math.random() * 100) + 1;
     parseInt(document.getElementById("target-number").innerText = TargetNumbers);
   }
-}
+}*/
 
 // Keep score of correct and incorrect answers 
 function countCorrect () {
   let oldScore = parseInt(document.getElementById("correct-answers").innerText);
   document.getElementById("correct-answers").innerText = ++oldScore;
 }
-
 function countIncorrect () {
   let oldScore = parseInt(document.getElementById("incorrect-answers").innerText);
   document.getElementById("incorrect-answers").innerText = ++oldScore;
 }
 
-// Reset game with score to 0, new FizzBuzz and Target Numbers 
+/* Reset score to 0
+function resetScore() {
+  document.getElementById("correct-answers").innerText = "";
+  document.getElementById("incorrect-answers").innerText = "";
+};*/
 
-function resetScore () {
+/*function resetScore () {
   clearResult();
   let resetScore = 0; 
   parseInt(document.getElementById("reset-scores").addEventListener("click", resetScore));
   document.getElementById("score-correct").innerText = resetScore; 
   document.getElementById("score-incorrect").innerText = resetScore;
-}
+}*/

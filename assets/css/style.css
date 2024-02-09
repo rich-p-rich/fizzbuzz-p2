@@ -88,6 +88,11 @@ main {
     color: white;
 }
 
+/*To disable the answer buttons until ReadyFizzBuzz and Target Numbers are clicked*/
+#user-answers {
+    display: none;
+}
+
 /*Set general styles for the answer buttons*/
 .answer-btns {   
     display: flex;
