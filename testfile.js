@@ -1,28 +1,25 @@
-// Initial values of btn1Ready and btn2Ready are undefined
-let btn1Ready;
-let btn2Ready;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Buttons</title>
+</head>
+<body>
 
-// generate the Fizz and Buzz numbers and ensure they are not identical
-document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuzz);
+<div id="user-answers" class="answer-btns">
+    <div class="button-container-1"> 
+        <button data-type="fizzbuzz" id="fizzbuzz-btn" class="answerButtons" onclick="getUserAnswer(event)">FizzBuzz</button>
+        <button data-type="fizz" id="fizz-btn" class="answerButtons" onclick="getUserAnswer(event)">Fizz</button>
+    </div>
+    <div class="button-container-2">
+        <button data-type="buzz" id="buzz-btn" class="answerButtons" onclick="getUserAnswer(event)">Buzz</button>
+        <button data-type="no" id="no-btn" class="answerButtons"  onclick="getUserAnswer(event)">No!</button>
+    </div>
+</div>
 
-function readyFizzBuzz() {
-  // Your existing code for generating Fizz and Buzz numbers
-}
+<!-- Include the JavaScript file -->
+<script src="script.js"></script>
 
-// generate the sequence of Target numbers
-document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers);
-function setTargetNumbers() {
-  // Your existing code for generating Target numbers
-}
-
-// clear the answer field with 'new target number'
-function clearResult() {
-  // Your existing code for clearing result
-};
-
-// enable user answer buttons after Ready FizzBuzz and Set TargetNumber are clicked 
-function enableAnsBtns() {
-  if (btn1Ready && btn2Ready) {
-    document.querySelector("#user-answers").style.display = 'flex';
-  } 
-}
+</body>
+</html>

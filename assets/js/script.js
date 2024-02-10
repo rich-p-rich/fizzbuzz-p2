@@ -116,6 +116,16 @@ function getUserAnswer(evt) {
   }
 }
 
+// allow the user to choose only one answer option
+function disable() {
+  let userAnswersDiv = document.getElementById('user-answers');
+  let elems = userAnswersDiv.querySelectorAll('.answerButtons');
+
+  for(let i = 0; i < elems.length; i++) {
+      elems[i].disabled = true;
+  }
+}
+
 // clear the answer field with 'new target number'
 function clearResult() {
   document.getElementById("display-result").innerText = "";
@@ -136,11 +146,3 @@ function resetScore() {
   document.getElementById("correct-answers").innerText = "0";
   document.getElementById("incorrect-answers").innerText = "0";
 };
-
-/*function resetScore () {
-  clearResult();
-  let resetScore = 0; 
-  parseInt(document.getElementById("reset-scores").addEventListener("click", resetScore));
-  document.getElementById("score-correct").innerText = resetScore; 
-  document.getElementById("score-incorrect").innerText = resetScore;
-}*/
