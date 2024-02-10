@@ -61,7 +61,7 @@ function correctAnswer() {
   let correctAnswer = "";
   if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
     correctAnswer = "FizzBuzz";
-  } else if (targetNumber % fizzNumber === 0) {
+    } else if (targetNumber % fizzNumber === 0) {
     correctAnswer = "Fizz";
   } else if (targetNumber % buzzNumber === 0) {
     correctAnswer = "Buzz";
@@ -70,7 +70,7 @@ function correctAnswer() {
   }
   return correctAnswer;
 }
-
+ 
 //Check user answer against correct answer and display on-screen
 function getUserAnswer(evt) {
   console.log(evt);
@@ -116,20 +116,29 @@ function getUserAnswer(evt) {
   }
 }
 
-// allow the user to choose only one answer option
-function disable() {
-  let userAnswersDiv = document.getElementById('user-answers');
-  let elems = userAnswersDiv.querySelectorAll('.answerButtons');
+/*
+//Restrict user to one answer per Target Number
+const answerButtons = document.getElementsByClassName('.answerButtons');
+const nextButtons = document.getElementsByClassName('enable-answers');
 
-  for(let i = 0; i < elems.length; i++) {
-      elems[i].disabled = true;
-  }
+function restrictAnswers() {
+  answerButtons.forEach(function(button) {
+    button.disabled = true;
+  });
 }
+
+//Enable answer field with new Target Number / reset score
+function enableAnswers() {
+  answerButtons.forEach(function(button) {
+    button.disabled = false;
+  });
+} */
 
 // clear the answer field with 'new target number'
 function clearResult() {
   document.getElementById("display-result").innerText = "";
 };
+
 
 // Keep score of correct and incorrect answers 
 function countCorrect () {

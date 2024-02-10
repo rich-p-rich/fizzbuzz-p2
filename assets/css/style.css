@@ -134,8 +134,20 @@ text-align: justify;
     margin: 5px;
 }
 
+/*set style for scores*/
+#correct-answers {
+    color: rgb(7, 168, 7);
+    font-weight: 800;
+    
+}
+
+#incorrect-answers {
+    color: red;
+    font-weight: 800;
+}
+
 #next-target-number {
-    background-color:  rgb(24, 184, 24);;
+    background-color:  rgb(3, 156, 3);;
     color: white;
 }
 
