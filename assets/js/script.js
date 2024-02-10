@@ -32,12 +32,13 @@ function readyFizzBuzz() {
 }
 
 // generate the sequence of Target numbers
-document.getElementById("set-target-numbers").addEventListener("click", setTargetNumbers);
+document.getElementById("set-target-numbers", "next-target-number").addEventListener("click", setTargetNumbers);
+   
 function setTargetNumbers() {
   clearResult();
   do {
     TargetNumbers = Math.floor(Math.random() * 100) + 1;
-    document.getElementById("target-number").innerText = TargetNumbers;
+    document.getElementById("target-number", "next-target-number").innerText = TargetNumbers;
   } while (TargetNumbers < 10);
   //set condition 2 of 2 to enable answer buttons (previous is Ready FizzBuzz)
   btn2Ready = true;
@@ -122,7 +123,7 @@ function clearResult() {
 
 
 // Get new target number to continue the game
-/*parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
+/* parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
 function setTargetNumbers() {
   {
     clearResult();
@@ -132,7 +133,7 @@ function setTargetNumbers() {
     TargetNumbers = Math.floor(Math.random() * 100) + 1;
     parseInt(document.getElementById("target-number").innerText = TargetNumbers);
   }
-}*/
+}*/ 
 
 // Keep score of correct and incorrect answers 
 function countCorrect () {
