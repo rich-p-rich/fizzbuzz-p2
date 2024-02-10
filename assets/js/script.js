@@ -121,20 +121,6 @@ function clearResult() {
   document.getElementById("display-result").innerText = "";
 };
 
-
-// Get new target number to continue the game
-/* parseInt(document.getElementById("next-target-number").addEventListener("click", setTargetNumbers));
-function setTargetNumbers() {
-  {
-    clearResult();
-    TargetNumbers = Math.floor(Math.random() * 100) + 1;
-    parseInt(document.getElementById("target-number").innerText = TargetNumbers).TargetNumbers;
-  } while (TargetNumbers < 10) {
-    TargetNumbers = Math.floor(Math.random() * 100) + 1;
-    parseInt(document.getElementById("target-number").innerText = TargetNumbers);
-  }
-}*/ 
-
 // Keep score of correct and incorrect answers 
 function countCorrect () {
   let oldScore = parseInt(document.getElementById("correct-answers").innerText);
@@ -145,11 +131,11 @@ function countIncorrect () {
   document.getElementById("incorrect-answers").innerText = ++oldScore;
 }
 
-/* Reset score to 0
+//Reset score to zero
 function resetScore() {
-  document.getElementById("correct-answers").innerText = "";
-  document.getElementById("incorrect-answers").innerText = "";
-};*/
+  document.getElementById("correct-answers").innerText = "0";
+  document.getElementById("incorrect-answers").innerText = "0";
+};
 
 /*function resetScore () {
   clearResult();
