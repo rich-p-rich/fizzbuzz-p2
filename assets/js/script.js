@@ -116,23 +116,32 @@ function getUserAnswer(evt) {
   }
 }
 
-/*
-//Restrict user to one answer per Target Number
-const answerButtons = document.getElementsByClassName('.answerButtons');
-const nextButtons = document.getElementsByClassName('enable-answers');
+
+//Restrict user to one answer per Target Number by disabling all answer buttons after user choice
+let answerButtons = document.querySelectorAll(".answerButtons");
+answerButtons.forEach(function (button) {
+  button.addEventListener("click", restrictAnswers);
+});
 
 function restrictAnswers() {
-  answerButtons.forEach(function(button) {
+  let answerButtons = document.querySelectorAll(".answerButtons");
+  answerButtons.forEach(function (button) {
     button.disabled = true;
   });
 }
 
-//Enable answer field with new Target Number / reset score
-function enableAnswers() {
-  answerButtons.forEach(function(button) {
-    button.disabled = false;
+//Enable answer buttons with new Target Number / reset score
+let enableAnswerButtons = document.querySelectorAll(".enableAnsBtns");
+answerButtons.forEach(function (button) {
+  button.addEventListener("click", restrictAnswers);
+});
+
+function restrictAnswers() {
+  let answerButtons = document.querySelectorAll(".answerButtons");
+  answerButtons.forEach(function (button) {
+    button.disabled = true;
   });
-} */
+}
 
 // clear the answer field with 'new target number'
 function clearResult() {
