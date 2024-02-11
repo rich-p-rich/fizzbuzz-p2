@@ -130,16 +130,16 @@ function restrictAnswers() {
   });
 }
 
-//Enable answer buttons with new Target Number / reset score
-let enableAnswerButtons = document.querySelectorAll(".enableAnsBtns");
-answerButtons.forEach(function (button) {
-  button.addEventListener("click", restrictAnswers);
+//Enable answer buttons with new Target Number / reset score / FizzBuzz button
+let allowButtons = document.querySelectorAll(".allowAnsBtns");
+allowButtons.forEach(function (button) {
+  button.addEventListener("click", allowAnswerButtons);
 });
 
-function restrictAnswers() {
+function allowAnswerButtons() {
   let answerButtons = document.querySelectorAll(".answerButtons");
   answerButtons.forEach(function (button) {
-    button.disabled = true;
+    button.disabled = false;
   });
 }
 
