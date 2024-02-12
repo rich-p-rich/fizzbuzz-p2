@@ -56,13 +56,34 @@ Initially I had the rules in a separate clickable button underneath the header a
 - This button generates the first target number, which is limited to between 10 and 100.  
 - By clicking on this button as well as the Ready FizzBuzz button, the user answers will be revealed.  
 - The player can also choose another Target Number if they don't like the one given to them; this does no re-set the scores.  
+*Additional functionality*
+- The player can also generate a new Target Number by clicking on 'Set Target Number' as I saw no reason to restrict this functionality to only 'Next Target Number.'  
 
-**Answer Section and Feedback** 
+**Answer Section and Feedback Section** 
 - The player can only click one button, one time, per Target Number  
 - By clicking on any of the four options, the player gives their answer and immediately sees underneath the answer buttons if it was correct or incorrect  
 - A this point, the answer buttons are no longer clickable 
 - The player needs to click on 'New Target Number' (or 'Set Target Number') to make the answer buttons clickable again
-- I chose to put the 
+- The feedback sentence 'Your answer was Correct / Incorrect' is deliberately between the answers and the 'Next Target Number' button to reflect the player's process -> answer question, find out if it was right, next question.  
+
+*Layout and Style of Answer Buttons*
+- I went with four vertically-stacked buttons as I thought it was important to have space between them to avoid players mistakenly clicking on'No' rather than 'FizzBuzz' 
+- The vertical design also suits the narrower mobile screen 
+- I put 'No!' at the bottom because it is the most common answer, so having it next to the 'Next Target Number' button makes the most sense, ergonomically.  
+- The answer buttons have a deliberately different style to the other buttons on the screen in order to differentiate them and identify them as special.  
+
+**Next Target Number**
+- This button generates the next target number and, by doing so, enables the answer buttons again.  
+- I added this button so the user doesn't have to move up above the answer buttons again
+- Also the description 'Next Target Number' is more accurate here than 'Set Target Number', because the player already has set a Target Number -> they just need a new one. 
+
+**Correct / Incorrect answers**
+- This keeps a count of the number of correct and incorrect answers the user has submitted.
+- In a more advanced iteration of this game, I would like the user to be able to add their username in a scoreboard; or in a timed game, this would show 'X number of correct answers in 60 seconds.'  
+
+
+**Reset Score**
+- This button sets the number of correct / incorrect scores to zero in case the user wants to do this. 
 
 
 
