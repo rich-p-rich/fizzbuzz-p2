@@ -31,8 +31,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-  
+}
+
 h1,
 h2,
 h3 {
@@ -40,7 +40,7 @@ h3 {
 }
 
 main {
-    background-color: white; 
+    background-color: white;
     height: 100%;
     width: 100%;
     padding: 1em;
@@ -54,7 +54,7 @@ main {
 .structure-btn {
     cursor: pointer;
     border: none;
-    border-radius: 12px;  
+    border-radius: 12px;
     width: 150px;
     font-size: 20px;
     padding: 7.5px 16px;
@@ -62,7 +62,7 @@ main {
 
 #click-for-rules {
     background-color: yellow;
-    color: black; 
+    color: black;
     border-color: none;
     border: none;
 }
@@ -75,7 +75,7 @@ main {
     line-height: 1.5;
     align-items: center;
     text-align: left;
-   }
+}
 
 .rules-headers {
     text-align: center;
@@ -99,22 +99,21 @@ main {
 }
 
 /*Set general styles for the answer buttons*/
-.user-input { 
-cursor: pointer;    
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-text-align: justify;
+.user-input {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
 }
-  
+
 #fizzbuzz-btn {
     background-color: rgb(132, 23, 196);
     color: white;
     width: 150px;
     font-size: 20px;
     margin: 5px;
-    border-color: white;
 }
 
 #fizz-btn {
@@ -123,7 +122,6 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
-    border-color: white;
 }
 
 #buzz-btn {
@@ -132,7 +130,6 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
-    border-color: white;
 }
 
 #no-btn {
@@ -141,26 +138,19 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
-    border-color: white;
 }
 
 /*grey out the answer buttons when disabled after click*/
-button.answerButtons:disabled {
+.answerButtons:disabled {
     opacity: 0.5;
-  cursor: not-allowed; 
+    cursor: not-allowed;
 }
 
-/*highlight the correct answer in green if user's answer is incorrect*/
-button.correct-answer {
-    background-color: lime;
-    border-color: lime;
-  }
-  
 /*set style for scores*/
 #correct-answers {
     color: rgb(7, 168, 7);
     font-weight: 800;
-    
+
 }
 
 #incorrect-answers {
@@ -194,5 +184,5 @@ footer {
         width: 50%;
         justify-content: center;
         align-items: center;
-       }
     }
+}
