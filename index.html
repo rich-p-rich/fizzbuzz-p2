@@ -20,43 +20,45 @@
 
 <body>
     <header>
-        <h1 id="header-text">Welcome to FizzBuzz!</h1>           
+        <h1 id="header-text">Welcome to FizzBuzz!</h1>  
+        <button id="click-for-rules">Click for game rules</button>
+        <div id="game-rules" class="hide">
+          <h3 class="rules-headers">Gameplay</h3>
+          <ul>
+            <li>Click Ready FizzBuzz
+                <ul>
+                    <li>Your FizzBuzz numbers are between 2 and 9</li>
+                    <li>They are not the same as each other</li>
+                    <li>They remain for the duration of the game</li>
+                </ul>
+            </li>
+            <li>Set your first Target Number 
+                <ul>
+                    <li>Your Target Number is between 10 and 100</li>
+                </ul>
+                <ul>
+                    <li>Decide whether your Target Number can be divided by:
+                        <ul>
+                            <li>Fizz</li>
+                            <li>Buzz</li>
+                            <li>Neither number</li>
+                            <li>Or both numbers, in which case it's FizzBuzz!</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3 class="rules-headers">Example Game</h3>
+        <p>In this example game, Fizz = 3, Buzz = 5</p>
+        <ul>
+            <li>Your first Target Number = 6: you tap Fizz</li>
+            <li>Your next Target Number = 10: you tap Buzz</li>
+            <li>The next Target Number = 13: you tap No!</li>
+            <li>The next Target Number = 15: you tap FizzBuzz</li>
+        </ul>
+        </div>         
     </header>
     <main>
-        <br>
-        <button id="click-for-rules" class="structure-btn">Click for game rules</button>
-        <div id="game-rules" class="hide">
-            </p>
-            <h3 class="rules-headers">Gameplay</h3>
-            <ul>
-                <li>Generate a pair of numbers between 2 and 9: Fizz and Buzz</li>
-                <ul>
-                    <li>The two numbers Fizz and Buzz will not be the same as each other</li>
-                    <li>Fizz and Buzz remain for duration of the game</li>
-                </ul>
-                <li>Generate a set of target numbers between 10 and 100</li>
-                <li>Work out whether your Target Number can be divided by:
-                    <ul>
-                        <li>Fizz</li>
-                        <li>Buzz</li>
-                        <li>Neither number</li>
-                        <li>Or both numbers, in which case it's FizzBuzz!</li>
-                    </ul>
-            </ul>
-
-            <h3 class="rules-headers">Example Game</h3>
-            <p>In this example game, Fizz = 3, Buzz = 5
-            <ul>
-                <li>Your first Target Number = 6: you tap Fizz</li>
-                <li>Your next Target Number = 10: you tap Buzz</li>
-                <li>The next Target Number = 13: you tap No!</li>
-                <li>The next Target Number = 15: you tap FizzBuzz</li>
-            </ul>
-            </p>
-        </div>
-        </div>
-        </div>
-        <br />
         <div>
             <br>
             <!--Generate the Fizz and Buzz Numbers-->

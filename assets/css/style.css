@@ -24,7 +24,6 @@ header {
     background-color: yellow;
     padding: 0.5em;
     text-align: center;
-    display: flex;
     align-items: baseline;
 }
 
@@ -50,7 +49,7 @@ main {
     flex: 1 0 auto;
 }
 
-/*Set general styles for the 'structure' buttons of show rules, set FizzBuzz and TargetNumbers*/
+/*Style 'click for rules' button in header*/
 
 .structure-btn {
     cursor: pointer;
@@ -61,38 +60,28 @@ main {
     padding: 7.5px 16px;
 }
 
-#how-to-play {
-    list-style: none;
-}
-
-details > summary {
-    list-style: none;
-  }
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
-  
-
 #click-for-rules {
-    background-color: red;
-    color: white; 
+    background-color: yellow;
+    color: black; 
+    border-color: none;
+    border: none;
 }
 
-#game-rules * {
-    margin: 0;
-    padding: 10px;
+#game-rules {
+    padding-left: 1px;
     box-sizing: border-box;
+    flex-direction: column;
     background-color: lightcyan;
     line-height: 1.5;
-    display: flex;
-    align-items: left;
-    flex-direction: column;
+    align-items: center;
     text-align: left;
-}
+   }
 
 .rules-headers {
-    align-items: center;
-    text-align: center;}
+    text-align: center;
+}
+
+/*Set general styles for the 'structure' buttons of show rules, set FizzBuzz and TargetNumbers*/
 
 #ready-fizzbuzz {
     background-color: orange;
