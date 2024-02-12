@@ -144,10 +144,14 @@ text-align: justify;
     border-color: white;
 }
 
-/*highlight the correct answer in green if user's answer is incorrect*/
+/*grey out the answer buttons when disabled after click*/
+button.answerButtons:disabled {
+    opacity: 0.5;
+  cursor: not-allowed; 
+}
 
-.correct-answer {
-    font-weight: bold; 
+/*highlight the correct answer in green if user's answer is incorrect*/
+button.correct-answer {
     background-color: lime;
     border-color: lime;
   }

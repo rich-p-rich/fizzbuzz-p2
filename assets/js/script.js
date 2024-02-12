@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // toggle between 'show' and 'hide' for the 'How the games works' section
 document.getElementById("click-for-rules").addEventListener("click", showHideGameplay);
+
+
 function showHideGameplay() {
   document.getElementById("game-rules").classList.toggle("hide");
 }
@@ -38,7 +40,7 @@ function readyFizzBuzz() {
 
 // generate the sequence of Target numbers
 document.getElementById("set-target-numbers", "next-target-number").addEventListener("click", setTargetNumbers);
-   
+
 function setTargetNumbers() {
   clearResult();
   do {
@@ -54,10 +56,10 @@ function setTargetNumbers() {
 function enableAnswerButtons() {
   if (btn1Ready && btn2Ready) {
     document.querySelector("#user-answers").style.display = 'flex';
-  } 
+  }
 }
 
-// calculate the correct answer
+// Calculate the correct answer
 function correctAnswer() {
   let targetNumber = parseInt(document.getElementById("target-number").innerText);
   let fizzNumber = parseInt(document.getElementById("fizz-number").innerText);
@@ -66,7 +68,7 @@ function correctAnswer() {
   let correctAnswer = "";
   if (targetNumber % fizzNumber === 0 && targetNumber % buzzNumber === 0) {
     correctAnswer = "FizzBuzz";
-    } else if (targetNumber % fizzNumber === 0) {
+  } else if (targetNumber % fizzNumber === 0) {
     correctAnswer = "Fizz";
   } else if (targetNumber % buzzNumber === 0) {
     correctAnswer = "Buzz";
@@ -75,8 +77,8 @@ function correctAnswer() {
   }
   return correctAnswer;
 }
- 
-//Check user answer against correct answer and display on-screen
+
+// Check user answer against correct answer and display on-screen
 function getUserAnswer(evt) {
   console.log(evt);
   const theAnswer = correctAnswer();
@@ -86,6 +88,7 @@ function getUserAnswer(evt) {
       if (theAnswer === 'FizzBuzz') {
         document.getElementById("display-result").innerHTML = "Correct!";
         countCorrect();
+        highlightCorrectAnswer();
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!";
         countIncorrect();
@@ -95,6 +98,7 @@ function getUserAnswer(evt) {
       if (theAnswer === 'Buzz') {
         document.getElementById("display-result").innerHTML = "Correct!";
         countCorrect();
+        highlightCorrectAnswer();
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!";
         countIncorrect();
@@ -104,6 +108,7 @@ function getUserAnswer(evt) {
       if (theAnswer === 'No!') {
         document.getElementById("display-result").innerHTML = "Correct!";
         countCorrect();
+        highlightCorrectAnswer();
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!";
         countIncorrect();
@@ -113,11 +118,32 @@ function getUserAnswer(evt) {
       if (theAnswer === 'Fizz') {
         document.getElementById("display-result").innerHTML = "Correct!";
         countCorrect();
+        highlightCorrectAnswer();
       } else {
         document.getElementById("display-result").innerHTML = "Incorrect!";
         countIncorrect();
       }
     }
+  }
+}
+
+//Highlight the correct answer in green after user clicks their option 
+function highlightCorrectAnswer() {
+  const theAnswer = correctAnswer();
+
+  let correctOption = null;
+  if (theAnswer === 'FizzBuzz') {
+    correctOption = document.getElementById('fizzbuzz-btn');
+  } else if (theAnswer === 'Buzz') {
+    correctOption = document.getElementById('buzz-btn');
+  } else if (theAnswer === 'No!') {
+    correctOption = document.getElementById('no-btn');
+  } else if (theAnswer === 'Fizz') {
+    correctOption = document.getElementById('fizz-btn');
+  }
+
+  if (correctOption) {
+    correctOption.classList.add('correct-answer');
   }
 }
 
@@ -154,11 +180,11 @@ function clearResult() {
 
 // Keep score of correct and incorrect answers 
 // ! This is based closely on the LoveMaths walk-through project on the CodeInstitut platform
-function countCorrect () {
+function countCorrect() {
   let oldScore = parseInt(document.getElementById("correct-answers").innerText);
   document.getElementById("correct-answers").innerText = ++oldScore;
 }
-function countIncorrect () {
+function countIncorrect() {
   let oldScore = parseInt(document.getElementById("incorrect-answers").innerText);
   document.getElementById("incorrect-answers").innerText = ++oldScore;
 }

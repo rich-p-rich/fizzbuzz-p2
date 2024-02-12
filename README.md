@@ -1,10 +1,8 @@
-Project Two is a version of the maths game "FizzBuzz." 
+## Project Two
 
-FizzBuzz is a basic maths game in which you have two base numbers, one called 'Fizz' and one called 'Buzz'. In the traditional form of the game, you would have a Fizz number, e.g. 3, and a 'Buzz' number, e.g. 5. You would then proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
+For Project Two I have created a multiple choice version of the maths game "FizzBuzz." In its traditional form, you choose two base numbers, one called 'Fizz' and one called Buzz. If for example your Fizz number was 3, and your Buzz was 5, you would then proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
 
-FizzBuzz is sometimes refered to as a children's game, but my version of the game can be used for anyone who likes puzzles and / or wants to practise some maths. It is designed for anyone of any age who can read and operate a mobile phone / web-browser.
-
-There are different variations on the game, but I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc); according to this video, FizzBuzz is commonly used in interviews 
+I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc); according to this video, FizzBuzz is commonly used in interviews 
 to assess how good computer programmers are at practically applying their skills. I have been teaching English to computer scientists at the Deggendorf Institute of Technology (the DIT) since April 2020, and this is one of the videos I use in class. 
 
 I have always enjoyed this video, in particular for he the emphasis he puts on on making the code easy to read, change and maintain; I worked in E-commerce in a previous career, and one of the shops I worked for was based on legacy code which was extremely difficult and time-consuming to update, making any changes painful and costly. Additionally, I have taught essay and writing skills to history undergraduates at UCL in the UK as well as at the DIT here in Germany, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
@@ -16,6 +14,9 @@ However, the setting for my version of the game is quite different to the versio
 - the player chooses from four options to answer the question: Fizz and Buzz, as outlined above
 - in addition, the player can choose 'No!' when the Target number cannot be divided by either Fizz or Buzz
 - the player can also choose 'FizzBuzz' as an option when the Target Number can be divided by both the Fizz and Buzz numbers.  
+
+
+I have tried to design it so that anyone who can read and operate a mobile phone / web-browser can play the game; it would work well for children / young teenagers who want to practise their maths, but I think it works well for people of all ages.  
 
 ## Orientation
 

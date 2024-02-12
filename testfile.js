@@ -1,4 +1,4 @@
-//Highlight the correct answer in green after user clicks their answer 
+//Highlight the correct answer in green after user clicks their option 
 function highlightCorrectAnswer() {
   const theAnswer = correctAnswer();  
 
