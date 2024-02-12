@@ -21,13 +21,32 @@
 <body>
     <header>
         <h1 id="header-text">Welcome to FizzBuzz!</h1>
+
+        <input type="checkbox" id="nav-toggle" name="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label" id="nav-toggle-label"
+        ><i class="fa-solid fa-bars"></i></label>
+      <nav id="how-to-play">
+        <details>
+            <summary>Gameplay</summary>
+            Here's gameplay stuff below
+        </details>
+        <details>
+            <summary>How to score</summary>
+            Here's some score stuff stuff below
+        </details>
+        <details>
+            <summary>Example Game</summary>
+            Here's an example game
+        </details>
+    </nav>
+            
     </header>
     <main>
         <br>
         <button id="click-for-rules" class="structure-btn">Click for game rules</button>
         <div id="game-rules" class="hide">
             </p>
-            <h3>Gameplay</h3>
+            <h3 class="rules-headers">Gameplay</h3>
             <ul>
                 <li>Generate a pair of numbers between 2 and 9: Fizz and Buzz</li>
                 <ul>
@@ -44,15 +63,7 @@
                     </ul>
             </ul>
 
-            <h3>Scoring system</h3>
-            <ul>
-                <li>If you tap Fizz, Buzz or No! correctly: 1 point</li>
-                <li>If you tap Fizz or Buzz when the answer was FizzBuzz: 1 point</li>
-                <li>If you tap FizzBuzz correctly: 2 points</li>
-                <li>Anything else: 0 points</li>
-            </ul>
-            <br />
-            <h3>Example Game</h3>
+            <h3 class="rules-headers">Example Game</h3>
             <p>In this example game, Fizz = 3, Buzz = 5
             <ul>
                 <li>Your first Target Number = 6: you tap Fizz</li>
@@ -68,7 +79,8 @@
         <div>
             <br>
             <!--Generate the Fizz and Buzz Numbers-->
-            <button id="ready-fizzbuzz" class="structure-btn" input type="button" class="allowAnsBtns">Ready FizzBuzz</button>
+            <button id="ready-fizzbuzz" class="structure-btn" input type="button" class="allowAnsBtns">Ready
+                FizzBuzz</button>
             <br>
             <br>
             <p>Fizz: <span id="fizz-number"></span></p>
@@ -97,7 +109,8 @@
                 <p>Your answer was <span id="display-result"></span></p>
             </div>
             <br>
-            <button type="button" onclick="setTargetNumbers()" id="next-target-number" class="structure-btn allowAnsBtns">Next Target
+            <button type="button" onclick="setTargetNumbers()" id="next-target-number"
+                class="structure-btn allowAnsBtns">Next Target
                 Number</button>
             <br>
             <br>
@@ -106,11 +119,9 @@
                 <p>Incorrect answers: <span id="incorrect-answers">0</span></p>
             </div>
             <br>
-            <br>
-            <button type="button" onclick="resetScore()" id="reset-scores" class="structure-btn allowAnsBtns">Reset Scores
+            <button type="button" onclick="resetScore()" id="reset-scores" class="structure-btn allowAnsBtns">Reset
+                Scores
             </button>
-
-
         </div>
     </main>
     <footer>

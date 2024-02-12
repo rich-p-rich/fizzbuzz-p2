@@ -1,14 +1,19 @@
-const answerButtons = document.querySelectorAll('.answerButtons');
-const nextButton = document.getElementById('.enable-answers');
+//Highlight the correct answer in green after user clicks their answer 
+function highlightCorrectAnswer() {
+  const theAnswer = correctAnswer();  
 
-function restrictAnswers() {
-  answerButtons.forEach(function(button) {
-    button.disabled = true;
-  });
-}
+  let correctOption = null;
+  if (theAnswer === 'FizzBuzz') {
+    correctOption = document.getElementById('fizzbuzz-btn');
+  } else if (theAnswer === 'Buzz') {
+    correctOption = document.getElementById('buzz-btn');
+  } else if (theAnswer === 'No!') {
+    correctOption = document.getElementById('no-btn');
+  } else if (theAnswer === 'Fizz') {
+    correctOption = document.getElementById('fizz-btn');
+  }
 
-function enableAnswers() {
-  answerButtons.forEach(function(button) {
-    button.disabled = false;
-  });
+  if (correctOption) {
+    correctOption.classList.add('correct-answer');
+  }
 }

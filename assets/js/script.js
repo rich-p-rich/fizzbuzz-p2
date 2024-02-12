@@ -1,5 +1,8 @@
-let btn1Ready = false;
-let btn2Ready = false;
+//Set both buttons to 'false' so that default setting = not displayed until FizzBuzzNumbers and Target Numbers are clicked
+// The function to enable the answer button display is line 51, the function is called at lines 21 and 40 for the FizzBuzz and TargetNumbers respectively 
+let btn1Ready = false; // This is the 'Ready FizzBuzz' button
+let btn2Ready = false; // This is the 'Ready Target Number' button
+
 
 // Set up order of operations (load DOM then game); add event listeners to the buttons
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,7 +31,8 @@ function readyFizzBuzz() {
   document.getElementById("buzz-number").innerText = BuzzNumber;
   //set condition 1 of 2 to enable answer buttons (next is Target Number)
   btn1Ready = true;
-  enableAnswerButtons()
+  enableAnswerButtons();
+  resetScore;
 }
 
 // generate the sequence of Target numbers
@@ -45,7 +49,7 @@ function setTargetNumbers() {
   enableAnswerButtons()
 }
 
-// Reveal the answer buttons once FizzBuzzNumbers and Target Numbers are clicked
+// Function to enable answer button display 
 function enableAnswerButtons() {
   if (btn1Ready && btn2Ready) {
     document.querySelector("#user-answers").style.display = 'flex'
@@ -116,7 +120,6 @@ function getUserAnswer(evt) {
   }
 }
 
-
 //Restrict user to one answer per Target Number by disabling all answer buttons after user choice
 let answerButtons = document.querySelectorAll(".answerButtons");
 answerButtons.forEach(function (button) {
@@ -147,7 +150,6 @@ function allowAnswerButtons() {
 function clearResult() {
   document.getElementById("display-result").innerText = "";
 };
-
 
 // Keep score of correct and incorrect answers 
 function countCorrect () {

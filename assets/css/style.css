@@ -32,6 +32,38 @@ header {
     align-items: center;
     }
 
+    nav {
+        position: absolute;
+        background-color: #007CC7;
+        width: 100%;
+        left: 0;
+        padding: 0 1rem;
+        box-shadow: 0 2px 2px #FFF325;
+        display: none;
+        top: 100%;
+        color: whitesmoke
+    }
+    
+    /*Nav toggle */
+    #nav-toggle:checked~nav {
+        display: block;
+    }
+    
+    #nav-toggle {
+        display: none;
+    }
+    
+    .nav-toggle-label {
+        font-size: 2rem;
+    }
+    
+    #nav-toggle-label {
+        color: #0a0a0a;
+        padding: 5px;
+    }
+    
+
+
 h1,
 h2,
 h3 {
@@ -59,6 +91,18 @@ main {
     padding: 7.5px 16px;
 }
 
+#how-to-play {
+    list-style: none;
+}
+
+details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+
 #click-for-rules {
     background-color: red;
     color: white; 
@@ -66,16 +110,19 @@ main {
 
 #game-rules * {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     box-sizing: border-box;
     background-color: lightcyan;
     line-height: 1.5;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
     flex-direction: column;
-    text-align: justify;
+    text-align: left;
 }
+
+.rules-headers {
+    align-items: center;
+    text-align: center;}
 
 #ready-fizzbuzz {
     background-color: orange;
@@ -108,6 +155,7 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
+    border-color: white;
 }
 
 #fizz-btn {
@@ -116,6 +164,7 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
+    border-color: white;
 }
 
 #buzz-btn {
@@ -124,6 +173,7 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
+    border-color: white;
 }
 
 #no-btn {
@@ -132,8 +182,17 @@ text-align: justify;
     width: 150px;
     font-size: 20px;
     margin: 5px;
+    border-color: white;
 }
 
+/*highlight the correct answer in green if user's answer is incorrect*/
+
+.correct-answer {
+    font-weight: bold; 
+    background-color: lime;
+    border-color: lime;
+  }
+  
 /*set style for scores*/
 #correct-answers {
     color: rgb(7, 168, 7);
@@ -147,7 +206,7 @@ text-align: justify;
 }
 
 #next-target-number {
-    background-color:  rgb(3, 156, 3);;
+    background-color: rgb(24, 184, 24);
     color: white;
 }
 
