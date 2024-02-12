@@ -7,7 +7,7 @@ let btn2Ready = false; // This is the 'Ready Target Number' button
 // Set up order of operations (load DOM then game); add event listeners to the buttons
 document.addEventListener("DOMContentLoaded", function () {
   let answerButtons = document.querySelectorAll(".answer-buttons");
-})
+});
 
 // toggle between 'show' and 'hide' for the 'How the games works' section
 document.getElementById("click-for-rules").addEventListener("click", showHideGameplay);
@@ -47,13 +47,13 @@ function setTargetNumbers() {
   } while (TargetNumbers < 10);
   //set condition 2 of 2 to enable answer buttons (previous is Ready FizzBuzz)
   btn2Ready = true;
-  enableAnswerButtons()
+  enableAnswerButtons();
 }
 
 // Function to enable answer button display 
 function enableAnswerButtons() {
   if (btn1Ready && btn2Ready) {
-    document.querySelector("#user-answers").style.display = 'flex'
+    document.querySelector("#user-answers").style.display = 'flex';
   } 
 }
 
@@ -150,9 +150,10 @@ function allowAnswerButtons() {
 // clear the answer field with 'new target number'
 function clearResult() {
   document.getElementById("display-result").innerText = "";
-};
+}
 
 // Keep score of correct and incorrect answers 
+// ! This is based closely on the LoveMaths walk-through project on the CodeInstitut platform
 function countCorrect () {
   let oldScore = parseInt(document.getElementById("correct-answers").innerText);
   document.getElementById("correct-answers").innerText = ++oldScore;
@@ -166,4 +167,4 @@ function countIncorrect () {
 function resetScore() {
   document.getElementById("correct-answers").innerText = "0";
   document.getElementById("incorrect-answers").innerText = "0";
-};
+}

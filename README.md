@@ -79,6 +79,7 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 **Correct / Incorrect answers**
 - This keeps a count of the number of correct and incorrect answers the user has submitted.
+- This is based closely on the function used in the LoveMaths walk-through project on the CodeInstitute. I could not find a better way of doing it so adapted it to my game. I have noted this on in the code itself with a comment above the 'countCorrect' function.
 - In a more advanced iteration of this game, I would like the user to be able to add their username in a scoreboard; or in a timed game, this would show 'X number of correct answers in 60 seconds.'  
 
 

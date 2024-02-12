@@ -84,7 +84,7 @@ main {
 /*Set general styles for the 'structure' buttons of show rules, set FizzBuzz and TargetNumbers*/
 
 #ready-fizzbuzz {
-    background-color: orange;
+    background-color: darkorange;
     color: white;
 }
 
@@ -186,10 +186,9 @@ footer {
 /* Media query: small laptops and larger (768px and up) */
 @media screen and (min-width: 768px) {
     #game-rules {
+        margin-left: 300px;
         width: 50%;
-        display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
        }
     }
