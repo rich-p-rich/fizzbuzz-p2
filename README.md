@@ -85,6 +85,56 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 **Reset Score**
 - This button sets the number of correct / incorrect scores to zero in case the user wants to do this. 
+- The score will also be reset when the user generates a new set of FizzBuzz numbers.  
+
+## Features Left to Implement
+
+To be completed 
+
+## Validator Testing 
+HTML
+CSS
+JS 
+
+## Lighthouse Testing 
+
+
+## Testing: appearance and functionality
+- Testing done on Chrome, Firefox, Samsung Internet version 23.0.1.1 on a Samsung A33.
+- Mobile testing included portrait and landscape views.
+- Link used: https://rich-p-rich.github.io/fizzbuzz-p2/
+- Also used for testing: Chrome Dev tools
+
+Add table 
+
+## Notable challenges and bugs (fixed)
+
+## Unfixed Bugs
+
+## Deployment
+
+I deployed the site to GitHub pages for the first time on 31.01.2024. I followed the steps outlined in the guidance:
+
+- From the GitHub repository -> Settings tab
+- Select pages
+- Set source to 'Deploy from Branch'
+- Select main folder
+- Folder set to / (root)
+
+The live link can be found here - <https://rich-p-rich.github.io/beekeeping-with-honey-bees-p1/>
+
+## Credits
+
+- Thank you to my mentor Dick Vlaanderen for valuable support and advice.
+- Thank you to the tutoring service  
+
+### Coding help:
+
+
+
+
+
+
 
 
 
