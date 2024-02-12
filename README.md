@@ -1,39 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Project Two is a version of the maths game "FizzBuzz." 
 
-Welcome,
+FizzBuzz is a basic maths game in which you have two base numbers, one called 'Fizz' and one called 'Buzz'. In the traditional form of the game, you would have a Fizz number, e.g. 3, and a 'Buzz' number, e.g. 5. You would then proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+FizzBuzz is sometimes refered to as a children's game, but my version of the game can be used for anyone who likes puzzles and / or wants to practise some maths. It is designed for anyone of any age who can read and operate a mobile phone / web-browser.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+There are different variations on the game, but I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc); according to this video, FizzBuzz is commonly used in interviews 
+to assess how good computer programmers are at practically applying their skills. I have been teaching English to computer scientists at the Deggendorf Institute of Technology (the DIT) since April 2020, and this is one of the videos I use in class. 
 
-## Codeanywhere Reminders
+I have always enjoyed this video, in particular for he the emphasis he puts on on making the code easy to read, change and maintain; I worked in E-commerce in a previous career, and one of the shops I worked for was based on legacy code which was extremely difficult and time-consuming to update, making any changes painful and costly. Additionally, I have taught essay and writing skills to history undergraduates at UCL in the UK as well as at the DIT here in Germany, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+FizzBuzz therefore seemed like a natural fit for Project 2, not least because, in the video above, Tom writes his solution in Javascript, and this was my chance to actually try out different ways to solve this question. 
+However, the setting for my version of the game is quite different to the version shown in the video, which demonstrates a 'one-time' solution to coding the FizzBuzz problem. In contrast, I wanted to turn it into an interactive online game. In order to do this, I turned it into a multiple choice game in which:
+- the Fizz and Buzz numbers stay constant for the duration of the game 
+- each Target Number represents a new question
+- the player chooses from four options to answer the question: Fizz and Buzz, as outlined above
+- in addition, the player can choose 'No!' when the Target number cannot be divided by either Fizz or Buzz
+- the player can also choose 'FizzBuzz' as an option when the Target Number can be divided by both the Fizz and Buzz numbers.  
 
-`python3 -m http.server`
+## Orientation
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- I have followed the 'mobile first' principle when designing this game. My first concern was that it presented and functioned well on mobiles, then on laptops and desktops. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- Audience. I have in mind anyone who wants to practise their maths skills, and I imagine this would work well as a game for kids and teenagers to practise division and multiplication. For that reason, I have kept the gameplay as simple as possible and kept the amount of text to a minimum; additionally, I have tried to keep the text divided up into small chunks. In essence, anyone of any age can play it, also so that anyone with limited English skills can play it too.
 
-`http_server`
+## Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**Navigation Bar**
+- In the header you can find a button called 'click here for how it works.' By clicking this button, you can display an explanation of the gameplay and scoring, plus an example game. 
+I included this via a toggle feature so that the player does need to switch pages to look at the rules - so no extra page is needed - nor does the player need to have the rules constantly visible, which would take up valuable screen space. I also thought that having the rules constantly open would be off-putting for first-time visitors.  
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Initially I had the rules in a separate clickable button underneath the header and above the 'Ready FizzBuzz' button, but after testing this on my mobile, I decided this was a taking up too much space: it was forcing the 'Reset Scores' button down out of view, so I decided to embed it in the header itself. 
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**Page Layout and Style** 
+- I have deliberately kept things simple, reflecting the simple nature of the game. I experimented with different background colours and styles, but settled on a plain white background with the buttons in primary colours; the text in the buttons is white as this shows up best against the colour of the buttons.  
 
-To log into the Heroku toolbelt CLI:
+- Colour choice. The use of primary colours in the page is also a nod to the probability that the real-life audience of this game would consist of children.  
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Vertical alignment. Give that this would probably be played on mobile or tablet devices, I felt that a vertical alignment works best to avoid any confusion. The player goes intutitively from 'Ready FizzBuzz' to 'Set Target Number'; this reveals the answer options below, and the player can choose the next Target Number, see their scores, or re-set their scores by following a simple vertical line.  
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
----
 
-Happy coding!
+## Game Play and Functionality 
+
+**Ready FizzBuzz**
+- This button generates the Fizz and Buzz numbers you need to play the game. 
+- I have limited the numbers to between 2 and 9 
+- Both numbers are deliberately different to each other, as otherwise there is no point having both 'Fizz' and 'Buzz'.
+- In future versions of the game, I would like to include more difficult FizzBuzz numbers, e.g. 11 - 100 by enabling a more difficult level.
+
+*Additional functionality*
+- This is one of the two buttons which needs to be clicked in order to make the answer section visible. The other is the 'Set Target Number' button.  
+- This button also re-sets the score to zero. If the player changes the FizzBuzz numbers, they are essentially starting a new game, which is why I added the 'reset scores' function to this button as well.  
+
+**Set Target Number**
+- This button generates the first target number, which is limited to between 10 and 100.  
+- By clicking on this button as well as the Ready FizzBuzz button, the user answers will be revealed.  
+- The player can also choose another Target Number if they don't like the one given to them; this does no re-set the scores.  
+
+**Answer Section and Feedback** 
+- The player can only click one button, one time, per Target Number  
+- By clicking on any of the four options, the player gives their answer and immediately sees underneath the answer buttons if it was correct or incorrect  
+- A this point, the answer buttons are no longer clickable 
+- The player needs to click on 'New Target Number' (or 'Set Target Number') to make the answer buttons clickable again
+- I chose to put the 
+
+
+
+
