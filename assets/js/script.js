@@ -32,7 +32,8 @@ function readyFizzBuzz() {
   //set condition 1 of 2 to enable answer buttons (next is Target Number)
   btn1Ready = true;
   enableAnswerButtons();
-  resetScore;
+  resetScore();
+  clearResult();
 }
 
 // generate the sequence of Target numbers

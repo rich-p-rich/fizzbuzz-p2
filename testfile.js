@@ -17,3 +17,5 @@ function highlightCorrectAnswer() {
     correctOption.classList.add('correct-answer');
   }
 }
+
+
