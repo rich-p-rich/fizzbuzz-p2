@@ -84,9 +84,11 @@ function correctAnswer() {
 function getUserAnswer(evt) {
   console.log(evt);
   const theAnswer = correctAnswer();
+  let userChoice = '';
+  
   if (evt !== null) {
-    let userChoice = '';
-    if (evt.currentTarget.id === 'fizzbuzz-btn') {
+     if (evt.currentTarget.id === 'fizzbuzz-btn') {
+      userChoice = 'FizzBuzz'; 
       //check if correct answer is FizzBuzz
       if (theAnswer === 'FizzBuzz') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -96,6 +98,7 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     } else if (evt.currentTarget.id === 'buzz-btn') {
+      userChoice = 'Buzz'; 
       //check if correct answer is Buzz
       if (theAnswer === 'Buzz') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -105,6 +108,7 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     } else if (evt.currentTarget.id === 'no-btn') {
+      userChoice = 'No!'; 
       //check if correct answer is No
       if (theAnswer === 'No!') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -114,6 +118,7 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     } else if (evt.currentTarget.id === 'fizz-btn') {
+      userChoice = 'Fizz';
       //check if correct answer is Fizz
       if (theAnswer === 'Fizz') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -123,10 +128,9 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     }
-    document.getElementById("user-choice").textContent = userChoice;
   }
-
-// These two lines complete the lines 'You chose ...' and 'The correct answer was ...' in the HTML   
+// Thid line es completes the line 'The correct answer was ...' in the HTML   
+document.getElementById("user-choice").textContent = userChoice;
 document.getElementById("right-answer").textContent = theAnswer;
 }
 
