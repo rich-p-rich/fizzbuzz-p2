@@ -61,7 +61,7 @@ Initially I had the rules in a separate clickable button underneath the header a
 *Additional functionality*
 - The player can also generate a new Target Number by clicking on 'Set Target Number' as I saw no reason to restrict this functionality to only 'Next Target Number.'  
 
-**Answer Section and Feedback Section** 
+**The Answer Buttons** 
 
 - Hiding the answer buttons. I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I choise to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
 
@@ -71,7 +71,8 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 - The player can only click one button, one time, per Target Number  
 - By clicking on any of the four options, the player gives their answer and immediately sees underneath the answer buttons if it was correct or incorrect  
-- A this point, the answer buttons are no longer clickable 
+- A this point, the answer buttons are no longer clickable and I put their opacity at 50% to sigal to the player that they cannot be clicked 
+- Laptop and Desktop users will also see that the mouse cannot be clicked when they hover the cursor over the buttons
 - The player needs to click on 'New Target Number' (or 'Set Target Number') to make the answer buttons clickable again
 - The feedback sentence 'Your answer was Correct / Incorrect' is deliberately between the answers and the 'Next Target Number' button to reflect the player's process -> answer question, find out if it was right, next question.  
 
@@ -81,12 +82,24 @@ Initially I had the rules in a separate clickable button underneath the header a
 - I put 'No!' at the bottom because it is the most common answer, so having it next to the 'Next Target Number' button makes the most sense, ergonomically.  
 - The answer buttons have a deliberately different style to the other buttons on the screen in order to differentiate them and identify them as special.  
 
+**User feedback**
+After clicking their answer, the user gets three pieces of feedback:
+- "You chose ..." This confirms to the reader what their choice was; it can be quite easy to forget which option you have chosen with these type of games so I decided to confirm this to the player here. 
+- "The right answer ..." This tells the user what the right answer was. I think this is important when players get the answer wrong, so they can compare their answer with the correct answer.
+- "Your answer was ..." This tells the player whether their answer was correct or incorrect. 
+
+All three pieces of feedback are always shown, regardless of whether the player got the question right or wrong.  
+
+I originally planned to highlight the button with the correct answer with a green border. However, this did not fit with the plan to disable the buttons after the user clicks their answer: a greyed-out button with a green border is a confusing mix of visual cues. Therefore I decided to simply write out the three bits of information as described above as this is clear and transparent for the player.
+
+
+
 **Next Target Number**
 - This button generates the next target number and, by doing so, enables the answer buttons again.  
 - I added this button so the user doesn't have to move up above the answer buttons again
 - Also the description 'Next Target Number' is more accurate here than 'Set Target Number', because the player already has set a Target Number -> they just need a new one. 
 
-**User feedback**
+**Keeping Score** 
 - This keeps a count of the number of correct and incorrect answers the user has submitted.
 - This is based closely on the function used in the LoveMaths walk-through project on the CodeInstitute. I could not find a better way of doing it so adapted it to my game. I have noted this on in the code itself with a comment above the 'countCorrect' function.
 - In a more advanced iteration of this game, I would like the user to be able to add their username in a scoreboard; or in a timed game, this would show 'X number of correct answers in 60 seconds.'  

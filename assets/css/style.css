@@ -178,8 +178,8 @@ footer {
 /* Media query: small laptops and larger (768px and up) */
 @media screen and (min-width: 768px) {
     #game-rules {
-        margin-left: 30%;
-        margin-right: 30%;
+        margin-left: 15%;
+        margin-right: 20%;
         justify-content: center;
         align-items: center;
         padding: 20px;
