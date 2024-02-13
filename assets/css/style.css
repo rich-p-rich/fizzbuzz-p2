@@ -3,7 +3,6 @@
 
 /* Asterisk wildcard selector overrides default styles from browser*/
 * {
-    padding: 1;
     margin: 0;
     box-sizing: border-box;
 }
@@ -63,12 +62,11 @@ main {
 #click-for-rules {
     background-color: yellow;
     color: black;
-    border-color: none;
     border: none;
 }
 
 #game-rules {
-    padding: 10px;
+    padding-left: 5px;
     box-sizing: border-box;
     flex-direction: column;
     background-color: lightcyan;

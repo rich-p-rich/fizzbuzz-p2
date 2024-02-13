@@ -4,10 +4,9 @@ let btn1Ready = false; // This is the 'Ready FizzBuzz' button
 let btn2Ready = false; // This is the 'Ready Target Number' button
 
 
-// Set up order of operations (load DOM then game); add event listeners to the buttons
+// Set up order of operations (load DOM then game); 
 document.addEventListener("DOMContentLoaded", function () {
-  let answerButtons = document.querySelectorAll(".answer-buttons");
-});
+  });
 
 // Toggle between 'show' and 'hide' for the 'How the games works' section
 document.getElementById("click-for-rules").addEventListener("click", showHideGameplay);
@@ -19,12 +18,16 @@ function showHideGameplay() {
 
 // Conditions to ensure the FizzBuzz numbers are between 2 and 9
 parseInt(document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuzz));
-parseInt(document.getElementById("ready-fizzbuzz").min = "2", max = "9");
+parseInt(document.getElementById("ready-fizzbuzz").min = "2");
+parseInt(document.getElementById("ready-fizzbuzz").max = "9");
 
 // Generate the Fizz and Buzz numbers and ensure they are not identical
 document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuzz);
 
 //Generate the FizzBuzz numbers 
+let FizzNumber;
+let BuzzNumber; 
+
 function readyFizzBuzz() {
   FizzNumber = Math.floor(Math.random() * 8) + 2;
   document.getElementById("fizz-number").innerText = FizzNumber;
@@ -43,6 +46,8 @@ function readyFizzBuzz() {
 document.getElementById("set-target-numbers", "next-target-number").addEventListener("click", setTargetNumbers);
 
 // Generate the Target Number, either by clicking 'Set' or 'Next' Target Number 
+let TargetNumbers;
+
 function setTargetNumbers() {
   clearResult();
   do {
@@ -75,12 +80,13 @@ function correctAnswer() {
   } else if (targetNumber % buzzNumber === 0) {
     correctAnswer = "Buzz";
   } else if (targetNumber % fizzNumber !== 0 && targetNumber % buzzNumber !== 0) {
-    correctAnswer = "No!";
+    correctAnswer = "No";
   }
   return correctAnswer;
 }
 
 // Check user answer against correct answer and display correct / incorrect on-screen
+// getUserAnswer refers to the 'onclick' attribute used at index.html line 77 and following to capture the user input
 function getUserAnswer(evt) {
   console.log(evt);
   const theAnswer = correctAnswer();
@@ -108,9 +114,9 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     } else if (evt.currentTarget.id === 'no-btn') {
-      userChoice = 'No!'; 
+      userChoice = 'No'; 
       //check if correct answer is No
-      if (theAnswer === 'No!') {
+      if (theAnswer === 'No') {
         document.getElementById("display-result").innerHTML = "Correct!";
         countCorrect();
       } else {
