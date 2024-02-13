@@ -2,11 +2,20 @@
 
 For Project Two I have created a multiple choice version of the maths game "FizzBuzz." In its traditional form, you choose two base numbers, one called 'Fizz' and one called Buzz; then, if for example your Fizz number was 3, and your Buzz number was 5, you would proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
 
-I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc). I have been teaching English to computer scientists at the Deggendorf Institute of Technology (the DIT) since April 2020, and this is one of the videos I use in class. 
+![Tom Scott FizzBuzz](documentation/documentation-images/tom-scott_fizzbuzz_1.PNG)
+
+
+I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc). I have been teaching English to computer scientists at the Deggendorf Institute of Technology (the DIT) in Germany since April 2020, and this is one of the videos I use in class. 
+
+![Tom Scott FizzBuzz](documentation/documentation-images/tom-scott_fizzbuzz_3.PNG)
 
 I have always enjoyed this video, in particular the emphasis he puts on making the code easy to read, change and maintain; I worked in E-commerce in a previous career, and one of the shops I worked for used legacy code for its platform which was extremely difficult and time-consuming to maintain and update, making any changes painful and costly; we had IT releases every second Monday and they invariably caused significant problems, including loss of sales. Additionally, I taught essay and writing skills to history undergraduates at UCL in the UK when I was still living there, and do a similar job here at the DIT in Germany, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
 
-FizzBuzz therefore seemed like a natural fit for Project 2, not least because, in the above video, Tom writes his solution in Javascript, and this was my chance to actually try out different ways to solve this question. However, the setting for my version of the game is quite different to that shown in the video, which demonstrates a 'one-time' solution to coding the FizzBuzz problem in a job interview setting. In contrast, I wanted to turn it into an interactive online game. I wanted the avoid asking the user to type in numbers, and asking the user to count in a linear manner per the traditional form of the game did not seem very promising. 
+FizzBuzz therefore seemed like a natural fit for Project 2, not least because, in the above video, Tom writes his solution in Javascript, and this was my chance to actually try out different ways to solve this question. However, the setting for my version of the game is quite different to that shown in the video, which demonstrates a 'one-time' solution to coding the FizzBuzz problem in a job interview setting. 
+
+![Tom Scott FizzBuzz-JS](documentation/documentation-images/tom-scott_fizzbuzz_2.PNG)
+
+In contrast, I wanted to turn it into an interactive online game. I wanted the avoid asking the user to type in numbers, and asking the user to count in a linear manner per the traditional form of the game did not seem very promising. 
 
 I therefore made a multiple choice game in which:
 - the Fizz and Buzz numbers stay constant for the duration of the game 
@@ -22,15 +31,25 @@ I have tried to design it so that anyone who can read and operate a mobile phone
 
 - I have followed the 'mobile first' principle when designing this game. My first concern was that it presented and functioned well on mobiles, then on laptops and desktops. I think this is realistic - this is the type of game someone would play on their mobile device, even though it works fine on laptops / desktops. 
 
+![Am I responsive](documentation/documentation-images/amiresponsive.PNG)
+
+- As the layout is essentially linear, I have only added two media queries to style the information box in the header so that it looks good on tablets and larger screens.  
+
 - Audience. I have in mind anyone who wants to practise their maths skills, and I imagine this would work well as a game for kids and teenagers to practise division and multiplication. For that reason, I have kept the gameplay as simple as possible and kept the amount of text to a minimum; additionally, I have tried to keep the text divided up into small chunks. In essence, anyone of any age can play it, and anyone with limited English skills can play it too.
 
 ## Features
 
-**Navigation Bar**
+**Header**
 - In the header you can find a button called 'click here for how it works.' By clicking this button, you can display an explanation of the gameplay and scoring, plus an example game. 
 I included this via a toggle feature so that the player does need to switch pages to look at the rules - so no extra page is needed - nor does the player need to have the rules constantly visible, which would take up valuable screen space. I also thought that having the rules constantly open would be off-putting for first-time visitors.  
 
+![Click here](documentation/documentation-images/features_1_click-here.PNG)
+
+![Click here](documentation/documentation-images/features_2_click-here.PNG)
+
 Initially I had the rules in a separate clickable button underneath the header and above the 'Ready FizzBuzz' button, but after testing this on my mobile, I decided this was a taking up too much space: it was forcing the 'Reset Scores' button down out of view, so I decided to embed it in the header itself. 
+
+![Old gameplay explanation box](documentation/documentation-images/features_2a_old-gameplay-box.jpg)
 
 **Page Layout and Style** 
 - I have deliberately kept things simple, reflecting the simple nature of the game. I experimented with different background colours and styles, but settled on a plain white background with the buttons in primary colours; the text in the buttons is white as this shows up best against the colour of the buttons.  
@@ -39,11 +58,12 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 - Vertical alignment. Give that this would probably be played on mobile or tablet devices, I felt that a vertical alignment works best to avoid any confusion. The player goes intutitively from 'Ready FizzBuzz' to 'Set Target Number'; this reveals the answer options below, and the player can choose the next Target Number, see their scores, or re-set their scores by following a simple vertical line.  
 
-
-
 ## Functionality per Button
 
 **Ready FizzBuzz**
+
+![FizzBuzz Button](documentation/documentation-images/features_7_FB-Button.PNG)
+
 - This button generates the Fizz and Buzz numbers you need to play the game. 
 - I have limited the numbers to between 2 and 9 for this version of the game
 - Both numbers are deliberately different to each other, as otherwise there is no point having both 'Fizz' and 'Buzz'.
@@ -54,6 +74,8 @@ Initially I had the rules in a separate clickable button underneath the header a
 - This button also re-sets the score to zero. If the player changes the FizzBuzz numbers, they are essentially starting a new game, which is why I added the 'reset scores' function to this button as well.  
 
 **Set Target Number**
+
+![Target Number Button](documentation/documentation-images/features_8_TN-Button.PNG)
 - This button generates the first target number, which is limited to between 10 and 100.  
 - By clicking on this button as well as the Ready FizzBuzz button, the answer buttons will be revealed.  
 - The player can also choose another Target Number if they don't like the one given to them; this does not re-set the scores.  
@@ -64,6 +86,24 @@ Initially I had the rules in a separate clickable button underneath the header a
 **The Answer Buttons** 
 
 - Hiding the answer buttons. I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I choise to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
+
+Before the FizzBuzz and Target Number buttons are clicked, it looks like this:
+![No Answer Buttons 1](documentation/documentation-images/features_3_no-answers-available.PNG)
+
+Both the FizzBuzz and the Target Number buttons needs to be clicked to reveal the answer buttons.
+
+With just the FizzBuzz button clicked: 
+
+![No Answer Buttons 2](documentation/documentation-images/features_4_no-answers-available-with-just-FB.PNG)
+
+
+With just the Target Number button clicked: 
+
+![No Answer Buttons 3](documentation/documentation-images/features_5_no-answers-available-with-just-TN.PNG)
+
+With both FizzBuzz and Target Number buttons clicked: 
+
+![Answer Buttons available](documentation/documentation-images/features_6_answers-available.PNG)
 
 - Naming the answer buttons. I deliberately used the imperative forms of 'Ready' and 'Set' because it is telling the user what to do; it also nicely echoes the instructions given at the start of a race so the sequence of operations should feel more intuitive. 
 
