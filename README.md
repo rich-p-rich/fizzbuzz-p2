@@ -3,21 +3,23 @@
 For Project Two I have created a multiple choice version of the maths game "FizzBuzz." In its traditional form, you choose two base numbers, one called 'Fizz' and one called Buzz; then, if for example your Fizz number was 3, and your Buzz number was 5, you would proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
 
 ![Tom Scott FizzBuzz](documentation/documentation-images/tom-scott_fizzbuzz_1.PNG)
-*image taken from (https://www.youtube.com/watch?v=QPZ0pIK_wsc*
+
+*image taken from https://www.youtube.com/watch?v=QPZ0pIK_wsc*
 
 
-I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc). I have been teaching English to computer scientists at the Deggendorf Institute of Technology (the DIT) in Germany since April 2020, and this is one of the videos I use in class. 
+I took the idea from a video called "FizzBuzz: One Simple Interview Question" by the YouTuber and podcaster Tom Scott (https://www.youtube.com/watch?v=QPZ0pIK_wsc). I have been teaching English to computer scientists, among other students, at the Deggendorf Institute of Technology (the DIT) in Germany since April 2020, and this is one of the videos I use in class. 
 
 ![Tom Scott FizzBuzz](documentation/documentation-images/tom-scott_fizzbuzz_3.PNG)
-*image taken from (https://www.youtube.com/watch?v=QPZ0pIK_wsc*
 
-I have always enjoyed this video, in particular the emphasis he puts on making the code easy to read, change and maintain. I worked in E-commerce in a previous career, and one of the shops I worked for used legacy code for its platform. This was extremely difficult and time-consuming to maintain and update which meant that implementing updates to the website was painful and costly; we had IT releases every second Monday and they invariably caused significant problems, including loss of sales due to poor website functionality following the release. Additionally, I taught essay and writing skills to history undergraduates at UCL in the UK when I was living and studying there, and I now teach English here at the DIT in Germany, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
+*image taken from https://www.youtube.com/watch?v=QPZ0pIK_wsc*
+
+I have always enjoyed this video, in particular the emphasis he puts on making the code easy to read, change and maintain. I worked in E-commerce in a previous career, and one of the shops I worked for used legacy code for its platform. This was extremely difficult and time-consuming to maintain and update which meant that implementing updates to the website was painful and costly; we had IT releases every second Monday and they invariably caused significant problems, including loss of sales due to poor website functionality following the release. Additionally, I set up an essay and writing skills for history undergraduates at University College London in the UK while I was studying there; this course had a strong focus on writing clearly and concisely, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
 
 FizzBuzz therefore seemed like a natural fit for Project 2, not least because, in the above video, Tom writes his solution in Javascript, and this was my chance to actually try out different ways to solve this question. However, the setting for my version of the game is quite different to that shown in the video, which demonstrates a 'one-time' solution to coding the FizzBuzz problem in a job interview setting. 
 
 ![Tom Scott FizzBuzz-JS](documentation/documentation-images/tom-scott_fizzbuzz_2.PNG)
 
-In contrast, I wanted to turn it into an interactive online game. I wanted the avoid asking the user to type in numbers, and asking the user to count in a linear manner per the traditional form of the game did not seem very promising. 
+In contrast, I wanted to turn it into an interactive online game. I wanted to avoid asking the user to type in numbers, and asking the user to count in a linear manner per the traditional form of the game did not seem very promising. 
 
 I therefore made a multiple choice game in which:
 - the Fizz and Buzz numbers stay constant for the duration of the game 
@@ -55,14 +57,14 @@ I have tried to design it so that anyone who can read and operate a mobile phone
 ## Features
 
 **Header**
-- In the header you can find a button called 'click here for how it works.' By clicking this button, you can display an explanation of the gameplay and scoring, plus an example game. 
+- In the header you can find a button called 'how it works: click here.' By clicking this button, you can display an explanation of the gameplay and scoring, plus an example game. 
 I included this via a toggle feature so that the player does need to switch pages to look at the rules - so no extra page is needed - nor does the player need to have the rules constantly visible, which would take up valuable screen space. I also thought that having the rules constantly open would be off-putting for first-time visitors.  
 
 ![Click here](documentation/documentation-images/features_1_click-here.PNG)
 
 ![Click here](documentation/documentation-images/features_2_click-here.PNG)
 
-Initially I had the rules in a separate clickable button underneath the header and above the 'Ready FizzBuzz' button, but after testing this on my mobile, I decided this was a taking up too much space: it was forcing the 'Reset Scores' button down out of view, so I decided to embed it in the header itself. 
+Initially I had the rules in a separate clickable button underneath the header and above the 'Ready FizzBuzz' button, but after testing this on my mobile, I decided this was a taking up too much space: it was forcing the 'Reset Scores' button down out of view, so I decided to embed the feature in the header itself. 
 
 ![Old gameplay explanation box](documentation/documentation-images/features_2a_old-gameplay-box.jpg)
 
@@ -104,7 +106,7 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 **The Answer Buttons** 
 
-- Hiding the answer buttons. I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I choise to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
+- **Hiding the answer buttons.** I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I choise to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
 
 Before the FizzBuzz and Target Number buttons are clicked, the page looks like this:
 
@@ -171,7 +173,7 @@ I originally planned to highlight the button with the correct answer with a gree
 
 **Keeping Score** 
 - This keeps a count of the number of correct and incorrect answers the user has submitted.
-- This is based closely on the function used in the LoveMaths walk-through project on the CodeInstitute. I could not find a better way of doing it so adapted it to my game. I have noted this on in the code itself with a comment above the 'countCorrect' function.
+- This is based closely on the function used in the LoveMaths walk-through project on the CodeInstitute. I could not find a better way of doing it so adapted it to my game. I have noted this in the code itself with a comment above the 'countCorrect' function.
 - In a more advanced iteration of this game, I would like the user to be able to add their username in a scoreboard; or in a timed game, this would show 'X number of correct answers in 60 seconds.'  
 
 ![Scores and Reset](documentation/documentation-images/features_13_nextTN_scores_reset.PNG)
@@ -188,7 +190,7 @@ I would like to implement one or both of the following:
 - A timer: e.g. complete as many answers as possible in 60 seconds.
 - Difficulty levels: I would like to enable more challenging FizzBuzz numbers and Target Numbers. Therefore if I was to work more on this, I would allow the user to choose a base level (as implemented in this version), then one or two more difficulty levels.
 
-Follow-up to the Tom Scott video. Clean code, maintainability and the Tom Scott video: if I had to chance to review this project, I would try to make the coding more concise as Tom Scott describes in the video I referenced at the start of this ReadMe. At this stage, I do not have the knowledge to do this properly, but I think it would make a good follow-up topic when I have increased my knowledge about JS.  I found JS challenging to begin with, but working with it was interesting and it is something I would like to come back to in the future. 
+**Follow-up to the Tom Scott video: clean code and maintainability.** If I had to chance to revise this project, I would try to make the coding more concise as Tom Scott describes in the video I referenced at the start of this ReadMe. At this stage, I do not have the knowledge to do this properly, but I think it would make a good follow-up project when I have increased my knowledge about JS.  I found JS extremely challenging to begin with, but working with it was interesting and it is something I would like to come back to in the future. 
 
 ## Validator Testing 
 HTML. I used https://validator.w3.org/#validate_by_input by direct input to test the HTML. There are no remaining errors.  
@@ -200,7 +202,7 @@ CSS. I used https://jigsaw.w3.org/css-validator/validator by direct input to tes
 
 ![W3 css](documentation/documentation-images/validator-w3CSS_checked.PNG)
 
-I used https://jshint.com/ to test my javascript. The only remaining feedback I have is the comment that 'getUserAnswer is an 'unsed variable'. However, it refers to the 'onclick' attribute 'getUserAnswer' in the HTML which I used to capture the user's answer. I have also made this comment in my JS code.  
+I used https://jshint.com/ to test my javascript. The only remaining feedback I have is the comment that 'getUserAnswer is an 'unused variable'. However, it refers to the 'onclick' attribute 'getUserAnswer' in the HTML which I used to capture the user's answer. I have also made this comment in my JS code.  
 
 ![JSHINT](documentation/documentation-images/jshint-feedback_130224.PNG)
 
@@ -226,57 +228,79 @@ The lighthouse testing returned good results.
 |Click Ready FizzBuzz                     | Generate a Fizz and Buzz number         | Pass   | 	      	
 |Click Ready FizzBuzz                     | The Fizz and Buzz numbers are different        | Pass | 
 |Click Ready FizzBuzz                     | The Fizz and Buzz numbers are between 2 and 9        | Pass |  
-|Click Ready FizzBuzz if scores are shown | Clears user feedback section and scores         | Pass  |
+|Click Ready FizzBuzz after player has started a game | Clears user feedback section and scores         | Pass  |
 |Click Set Target Number | Generates a number between 10 and 100        | Pass  |
-|Click Set Target Number after an answer has been given | Enables answer buttons        | Pass  |
 |Click Ready FizzBuzz and Set Target Number | Reveals answer buttons        | Pass  |
 |Click Ready FizzBuzz and Set Target Number  | All answer buttons are clickable         | Pass  |
+|Click Set Target Number after an answer has been given | Enables answer buttons        | Pass  |
 |Click Fizz answer button | Signals that the user has chosen Fizz        | Pass  |
 |Click Fizz answer button | Answer buttons are now disabled     | Pass  |
-|Click Fizz answer button | User feedback section is appropriately filled out    | Pass  |
+|Click Fizz answer button | User feedback section is appropriately filled out with 'You have chosen Fizz'   | Pass  |
 |Click Fizz answer button | JS correctly calculates the answer and matches with Fizz input    | Pass  |
 |Click Fizz answer button | If the answer is Fizz, + 1 correct score        | Pass  |
 |Click Fizz answer button | If the answer is Fizz, + 1 incorrect score        | Pass |
 |Click Buzz answer button | Signals that the user has chosen Buzz        | Pass  |
 |Click Buzz answer button | Answer buttons are now disabled     | Pass  |
-|Click Buzz answer button | User feedback section is appropriately filled out    | Pass  |
+|Click Buzz answer button | User feedback section is appropriately filled out with 'You have chosen Buzz'    | Pass  |
 |Click Buzz answer button | JS correctly calculates the answer and matches with Buzz input    | Pass  |
 |Click Buzz answer button | If the answer is Buzz, + 1 correct score        | Pass  |
 |Click Buzz answer button | If the answer is Buzz, + 1 incorrect score        | Pass |
 |Click FizzBuzz answer button | Signals that the user has chosen FizzBuzz        | Pass |  
 |Click FizzBuzz answer button | Answer buttons are now disabled     | Pass  |
-|Click FizzBuzz answer button | User feedback section is appropriately filled out    | Pass  |
+|Click FizzBuzz answer button | User feedback section is appropriately filled out with 'You have chosen FizzBuzz'    | Pass  |
 |Click FizzBuzz answer button | JS correctly calculates the answer and matches with FizzBuzz input    | Pass  |
 |Click FizzBuzz answer button | If the answer is FizzBuzz, + 1 correct score        | Pass  |
 |Click FizzBuzz answer button | If the answer is FizzBuzz, + 1 incorrect score        | Pass |
 |Click No answer button | Signals that the user has chosen No        | Pass | 
 |Click No answer button | Answer buttons are now disabled     | Pass  |
-|Click No answer button | User feedback section is appropriately filled out    | Pass  |
+|Click No answer button | User feedback section is appropriately filled out with 'You have chosen No'   | Pass  |
 |Click No answer button | JS correctly calculates the answer and matches with No input    | Pass  |
 |Click No answer button | If the answer is No, + 1 correct score        | Pass  |
 |Click No answer button | If the answer is No, + 1 incorrect score        | Pass |
 |Click Next Target Number | Generates new Target Number       | Pass  |
 |Click Next Target Number after an answer has been given | Enables answer buttons        | Pass  |
-|Click Reset Scores | Clear Correct and Incorrect scores      | Pass  |
+|Click Reset Scores | Clears Correct and Incorrect scores, sets to Zero      | Pass  |
 
 ## Notable challenges and bugs
 
 I encountered several difficult challenges while preparing this game. 
 
-- The most difficult problem I had with regard to coding the game was the following process:
+- The most difficult problem I had with regard to coding the game was bringing the following process together:
 
     - Identifying the user input 
     - Matching it against the correct answer as calculated by the JS
     - Displaying the feedback 'correct / incorrect' on screen in the HTML
     - Clearing the feedback 'correct / incorrect' to give feedback to the next question 
 
-The root of my problem was that I did not properly understand the process of first delaring the function, and then calling the function. 
+I was able to work out how to code each section, but I did not properly understand the process of first delaring the function, and then calling the function. The fix proved to be reasonably straight-forward once my mentor had suggested that I adapt my 'getUserAnswer' function with some 'if / else' statements for each button (line 95 and following of the JS file). Once I did this, the process was ok, but I spent a lot of time trying to work out the answer on my own, unsucessfully. 
 
+- The other major challenge that I faced was how to disable the answer buttons until the player had activated both the FizzBuzz and Target Number buttons. I tried adding a class to each button and triggering them by a JS function; this did not work, and I also then struggled to work out how to apply this functionality to two buttons (both FizzBuzz and Target Number). Again, I had to rely on the Tutoring Service for some help here as I could not work it out on my own. I ended up solving the problem as follows:
+- I declared buttons 1 and 2 as global variables at the top of the page (with comments) which set the default setting for each as false: this means that the answer section is by default hidden
+- I wrote a function called 'enable Answer Buttons' which linked Buttons 1 and 2 to the answer section via its ID "user-answers". 
+- I then called the function in (i) the Generate FizzBuzz button (for button 1) and then (ii) the Generate Taret Number button (for button 2). 
+- Once both conditions are true, the answer section is displayed.  
 
+**Bugs**
 
+I encountered relatively few true bugs, as the process of writing JS code was itself difficult and the problems I had were because I did not write the code properly, or did not call the functions properly. So in contrast to Project 1 where I could write the code but had faulty outputs, the problems I faced led to me writing code with no output at all, which means I have relatively little to show.  
 
+However, a couple of minor bugs with regard to the gameplay display at the top of the page are worth mentioning.  
 
+- The padding was being over-written in the 'click for gameplay' section : 
 
+![Bug left padding](documentation/documentation-images/bug_left-padding.PNG)
+
+- I was using the wrong combination of flex properties when I added the media queries for the gameplay section, which left the box situated to the left of the screen:
+
+![Bug left padding](documentation/documentation-images/bug_mediaquery-flex_gameplay-position_2.PNG)
+
+I solved this by changing the 'width' from 50% to targeting the box by setting margin-left and margin-right, which worked fine in the end.
+
+![Bug left padding CSS](documentation/documentation-images/bug_mediaquery.PNG)
+
+Solution:
+
+![Bug left padding CSS solution](documentation/documentation-images/bug-medquery-solution.PNG) 
 
 
 ## Deployment
@@ -298,7 +322,7 @@ The live link can be found here - <https://rich-p-rich.github.io/beekeeping-with
 
 ### Coding help:
 
-I used a lot of resources to help me complete this game. Some of the main ones were:
+I used many resources to help me complete this game. Some of the main ones were:
 
 - Toggle show / hide gameplay:
 https://stackoverflow.com/questions/63456745/why-wont-my-toggle-menu-function-work-for-a-div-instead-of-a-button-fixed
