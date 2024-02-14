@@ -1,4 +1,4 @@
-## Project Two: FizzBuzz
+## Project Two: Javascript and  FizzBuzz
 
 For Project Two I have created a multiple choice version of the maths game "FizzBuzz." In its traditional form, you choose two base numbers, one called 'Fizz' and one called Buzz; then, if for example your Fizz number was 3, and your Buzz number was 5, you would proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
 
@@ -32,6 +32,13 @@ The player chooses from four options to solve the Target Number question:
 
 
 I have tried to design it so that anyone who can read and operate a mobile phone / web-browser can play the game; it would work well for children / young teenagers who want to practise their maths, but I think it works well for people of all ages.  
+
+## Gameplay: Development 
+
+My plan for the scoring system has changed since I wrote my Wireframe. Originally I planned to have a correct 'FizzBuzz' answer worth 2 points, and any other correct answers worth 1 point; if the answer was FizzBuzz, and the player had clicked on the mathematically correct option of Fizz or Buzz, I would have also given the player 1 point. I found this too complicated during the development of the game, however, and so left it at 1 point per correct answer.  
+
+I also planned originally to set the player a sequence of 10 Target Numbers as I thought this would be a good way to set some structure for the player. I decided, however, that offering the player the chance to play for as long or as short as they like is fine, and setting a limit to the questions may be an option for future development.  
+
 
 ## Orientation
 
@@ -106,7 +113,7 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 **The Answer Buttons** 
 
-- **Hiding the answer buttons.** I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I choise to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
+- **Hiding the answer buttons.** I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target Number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I chose to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
 
 Before the FizzBuzz and Target Number buttons are clicked, the page looks like this:
 
@@ -189,6 +196,7 @@ I would like to implement one or both of the following:
 
 - A timer: e.g. complete as many answers as possible in 60 seconds.
 - Difficulty levels: I would like to enable more challenging FizzBuzz numbers and Target Numbers. Therefore if I was to work more on this, I would allow the user to choose a base level (as implemented in this version), then one or two more difficulty levels.
+- A user name so that the player can keep track of their scores.  
 
 **Follow-up to the Tom Scott video: clean code and maintainability.** If I had to chance to revise this project, I would try to make the coding more concise as Tom Scott describes in the video I referenced at the start of this ReadMe. At this stage, I do not have the knowledge to do this properly, but I think it would make a good follow-up project when I have increased my knowledge about JS.  I found JS extremely challenging to begin with, but working with it was interesting and it is something I would like to come back to in the future. 
 
@@ -322,7 +330,15 @@ The live link can be found here - <https://rich-p-rich.github.io/beekeeping-with
 
 ### Coding help:
 
-I used many resources to help me complete this game. Some of the main ones were:
+I was an absolute beginner with Javascript at the start of this course, and have never worked with it before. Therefore I used many resources to help me complete this game. 
+
+My initial and main source of information was the 'Javascript Essentials' and the 'Love Maths Project' in the Code Institute platform.
+
+I used Jon Duckett (2014) "Javascript and JQuery: Interactive Front-End Web Development", published by Wiley as a reference book.  
+
+I consulted many of the JS tutorials on w3schools: https://www.w3schools.com/js/default.asp
+
+Some of the main online resources I used were:
 
 - Toggle show / hide gameplay:
 https://stackoverflow.com/questions/63456745/why-wont-my-toggle-menu-function-work-for-a-div-instead-of-a-button-fixed
