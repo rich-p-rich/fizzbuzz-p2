@@ -6,7 +6,7 @@ let btn2Ready = false; // This is the 'Ready Target Number' button
 
 // Set up order of operations (load DOM then game); 
 document.addEventListener("DOMContentLoaded", function () {
-  });
+});
 
 // Toggle between 'show' and 'hide' for the 'How the games works' section
 document.getElementById("click-for-rules").addEventListener("click", showHideGameplay);
@@ -26,7 +26,7 @@ document.getElementById("ready-fizzbuzz").addEventListener("click", readyFizzBuz
 
 //Generate the FizzBuzz numbers 
 let FizzNumber;
-let BuzzNumber; 
+let BuzzNumber;
 
 function readyFizzBuzz() {
   FizzNumber = Math.floor(Math.random() * 8) + 2;
@@ -91,10 +91,10 @@ function getUserAnswer(evt) {
   console.log(evt);
   const theAnswer = correctAnswer();
   let userChoice = '';
-  
+
   if (evt !== null) {
-     if (evt.currentTarget.id === 'fizzbuzz-btn') {
-      userChoice = 'FizzBuzz'; 
+    if (evt.currentTarget.id === 'fizzbuzz-btn') {
+      userChoice = 'FizzBuzz';
       //check if correct answer is FizzBuzz
       if (theAnswer === 'FizzBuzz') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -104,7 +104,7 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     } else if (evt.currentTarget.id === 'buzz-btn') {
-      userChoice = 'Buzz'; 
+      userChoice = 'Buzz';
       //check if correct answer is Buzz
       if (theAnswer === 'Buzz') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -114,7 +114,7 @@ function getUserAnswer(evt) {
         countIncorrect();
       }
     } else if (evt.currentTarget.id === 'no-btn') {
-      userChoice = 'No'; 
+      userChoice = 'No';
       //check if correct answer is No
       if (theAnswer === 'No') {
         document.getElementById("display-result").innerHTML = "Correct!";
@@ -135,9 +135,9 @@ function getUserAnswer(evt) {
       }
     }
   }
-// Thid line es completes the line 'The correct answer was ...' in the HTML   
-document.getElementById("user-choice").textContent = userChoice;
-document.getElementById("right-answer").textContent = theAnswer;
+  // Thid line es completes the line 'The correct answer was ...' in the HTML   
+  document.getElementById("user-choice").textContent = userChoice;
+  document.getElementById("right-answer").textContent = theAnswer;
 }
 
 // Restrict user to one answer per Target Number by disabling all answer buttons after user choice

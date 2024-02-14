@@ -3,11 +3,13 @@
 For Project Two I have created a multiple choice version of the maths game "FizzBuzz." In its traditional form, you choose two base numbers, one called 'Fizz' and one called Buzz; then, if for example your Fizz number was 3, and your Buzz number was 5, you would proceed to count, saying Fizz for every multiple of 3, Buzz for every multiple of 5, and FizzBuzz for every number that is a multiple of both.  
 
 ![Tom Scott FizzBuzz](documentation/documentation-images/tom-scott_fizzbuzz_1.PNG)
+*image taken from (https://www.youtube.com/watch?v=QPZ0pIK_wsc*
 
 
 I took the idea from a Tom Scott video called "FizzBuzz: One Simple Interview Question" (https://www.youtube.com/watch?v=QPZ0pIK_wsc). I have been teaching English to computer scientists at the Deggendorf Institute of Technology (the DIT) in Germany since April 2020, and this is one of the videos I use in class. 
 
 ![Tom Scott FizzBuzz](documentation/documentation-images/tom-scott_fizzbuzz_3.PNG)
+*image taken from (https://www.youtube.com/watch?v=QPZ0pIK_wsc*
 
 I have always enjoyed this video, in particular the emphasis he puts on making the code easy to read, change and maintain. I worked in E-commerce in a previous career, and one of the shops I worked for used legacy code for its platform. This was extremely difficult and time-consuming to maintain and update which meant that implementing updates to the website was painful and costly; we had IT releases every second Monday and they invariably caused significant problems, including loss of sales due to poor website functionality following the release. Additionally, I taught essay and writing skills to history undergraduates at UCL in the UK when I was living and studying there, and I now teach English here at the DIT in Germany, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
 
@@ -38,6 +40,15 @@ I have tried to design it so that anyone who can read and operate a mobile phone
 - As the layout is essentially linear, I have only added two media queries to style the information box in the header so that it looks good on tablets and larger screens.  
 
 ![Media Queries](documentation/documentation-images/features_2_media-queries.PNG)
+
+    - Tablet view: 
+
+![Tablet](documentation/documentation-images/features_2a_media-queries-tablet.PNG)
+
+    - Laptop view: 
+
+![Laptop](documentation/documentation-images/features_2a_media-queries-laptop.PNG)
+
 
 - Audience. I have in mind anyone who wants to practise their maths skills, and I imagine this would work well as a game for kids and teenagers to practise division and multiplication. For that reason, I have kept the gameplay as simple as possible and kept the amount of text to a minimum; additionally, I have tried to keep the text divided up into small chunks. In essence, anyone of any age can play it, and anyone with limited English skills can play it too.
 
@@ -95,8 +106,11 @@ Initially I had the rules in a separate clickable button underneath the header a
 
 - Hiding the answer buttons. I have deliberately kept the answer buttons hidden until the user has clicked on Ready FizzBuzz and Set Target number. As the FizzBuzz and Target Numbers are essential for playing the game, it made sense to compel the player to click on them. I considered greying out the answer buttons as a sign to the player that the answers are not yet enabled, but decided that this would raise more questions in the player's mind. So I choise to hide them completely. This gives the player no choice but to follow the directions given by the 'Ready' FizzBuzz and 'Set' Target Number buttons.    
 
-Before the FizzBuzz and Target Number buttons are clicked, it looks like this:
+Before the FizzBuzz and Target Number buttons are clicked, the page looks like this:
+
+
 ![No Answer Buttons 1](documentation/documentation-images/features_3_no-answers-available.PNG)
+
 
 Both the FizzBuzz and the Target Number buttons needs to be clicked to reveal the answer buttons.
 
@@ -123,7 +137,7 @@ With both FizzBuzz and Target Number buttons clicked:
 - Laptop and Desktop users will also see that the mouse cannot be clicked when they hover the cursor over the buttons
 - The player needs to click on 'New Target Number' (or 'Set Target Number') to make the answer buttons clickable again
 
-On the left the answers are available, on the right the answers are disabled and so faded-out after the user has chosen their answer:
+On the left the answers are available, on the right the answers are disabled and faded-out after the user has chosen their answer:
 
 ![Answer Buttons on / off](documentation/documentation-images/features_16_answers_on-off.PNG)
 
@@ -174,7 +188,7 @@ I would like to implement one or both of the following:
 - A timer: e.g. complete as many answers as possible in 60 seconds.
 - Difficulty levels: I would like to enable more challenging FizzBuzz numbers and Target Numbers. Therefore if I was to work more on this, I would allow the user to choose a base level (as implemented in this version), then one or two more difficulty levels.
 
-- Clean code, maintainability and the Tom Scott video: if I had to chance to review this project, I would try to make the coding more concise as Tom Scott describes in the video I referenced at the start of this ReadMe. At this stage, I do not have the knowledge to do this properly, but I think it would make a good follow-up topic when I have increased my knowledge about JS.  I found JS challenging to begin with, but working with it was interesting and it is something I would like to come back to in the future. 
+Follow-up to the Tom Scott video. Clean code, maintainability and the Tom Scott video: if I had to chance to review this project, I would try to make the coding more concise as Tom Scott describes in the video I referenced at the start of this ReadMe. At this stage, I do not have the knowledge to do this properly, but I think it would make a good follow-up topic when I have increased my knowledge about JS.  I found JS challenging to begin with, but working with it was interesting and it is something I would like to come back to in the future. 
 
 ## Validator Testing 
 HTML. I used https://validator.w3.org/#validate_by_input by direct input to test the HTML. There are no remaining errors.  
@@ -205,9 +219,64 @@ The lighthouse testing returned good results.
 - Link used: https://rich-p-rich.github.io/fizzbuzz-p2/
 - Also used for testing: Chrome Dev tools
 
-Add table 
+| Test                                              | Expected outcome                                    | Result |
+| ------------------------------------------------- | --------------------------------------------------- | ------ |	
+|Header - 'click here'                     | Show gameplay explanation   	        | Pass   | 
+|Header - 'click here'                     | Hide gameplay explanation   	        | Pass  |
+|Click Ready FizzBuzz                     | Generate a Fizz and Buzz number         | Pass   | 	      	
+|Click Ready FizzBuzz                     | The Fizz and Buzz numbers are different        | Pass | 
+|Click Ready FizzBuzz                     | The Fizz and Buzz numbers are between 2 and 9        | Pass |  
+|Click Ready FizzBuzz if scores are shown | Clears user feedback section and scores         | Pass  |
+|Click Set Target Number | Generates a number between 10 and 100        | Pass  |
+|Click Set Target Number after an answer has been given | Enables answer buttons        | Pass  |
+|Click Ready FizzBuzz and Set Target Number | Reveals answer buttons        | Pass  |
+|Click Ready FizzBuzz and Set Target Number  | All answer buttons are clickable         | Pass  |
+|Click Fizz answer button | Signals that the user has chosen Fizz        | Pass  |
+|Click Fizz answer button | Answer buttons are now disabled     | Pass  |
+|Click Fizz answer button | User feedback section is appropriately filled out    | Pass  |
+|Click Fizz answer button | JS correctly calculates the answer and matches with Fizz input    | Pass  |
+|Click Fizz answer button | If the answer is Fizz, + 1 correct score        | Pass  |
+|Click Fizz answer button | If the answer is Fizz, + 1 incorrect score        | Pass |
+|Click Buzz answer button | Signals that the user has chosen Buzz        | Pass  |
+|Click Buzz answer button | Answer buttons are now disabled     | Pass  |
+|Click Buzz answer button | User feedback section is appropriately filled out    | Pass  |
+|Click Buzz answer button | JS correctly calculates the answer and matches with Buzz input    | Pass  |
+|Click Buzz answer button | If the answer is Buzz, + 1 correct score        | Pass  |
+|Click Buzz answer button | If the answer is Buzz, + 1 incorrect score        | Pass |
+|Click FizzBuzz answer button | Signals that the user has chosen FizzBuzz        | Pass |  
+|Click FizzBuzz answer button | Answer buttons are now disabled     | Pass  |
+|Click FizzBuzz answer button | User feedback section is appropriately filled out    | Pass  |
+|Click FizzBuzz answer button | JS correctly calculates the answer and matches with FizzBuzz input    | Pass  |
+|Click FizzBuzz answer button | If the answer is FizzBuzz, + 1 correct score        | Pass  |
+|Click FizzBuzz answer button | If the answer is FizzBuzz, + 1 incorrect score        | Pass |
+|Click No answer button | Signals that the user has chosen No        | Pass | 
+|Click No answer button | Answer buttons are now disabled     | Pass  |
+|Click No answer button | User feedback section is appropriately filled out    | Pass  |
+|Click No answer button | JS correctly calculates the answer and matches with No input    | Pass  |
+|Click No answer button | If the answer is No, + 1 correct score        | Pass  |
+|Click No answer button | If the answer is No, + 1 incorrect score        | Pass |
+|Click Next Target Number | Generates new Target Number       | Pass  |
+|Click Next Target Number after an answer has been given | Enables answer buttons        | Pass  |
+|Click Reset Scores | Clear Correct and Incorrect scores      | Pass  |
 
-## Notable challenges and bugs (fixed)
+## Notable challenges and bugs
+
+I encountered several difficult challenges while preparing this game. 
+
+- The most difficult problem I had with regard to coding the game was the following process:
+
+    - Identifying the user input 
+    - Matching it against the correct answer as calculated by the JS
+    - Displaying the feedback 'correct / incorrect' on screen in the HTML
+    - Clearing the feedback 'correct / incorrect' to give feedback to the next question 
+
+The root of my problem was that I did not properly understand the process of first delaring the function, and then calling the function. 
+
+
+
+
+
+
 
 
 ## Deployment
