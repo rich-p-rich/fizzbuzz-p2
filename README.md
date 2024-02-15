@@ -308,13 +308,13 @@ However, a couple of  bugs with regard to the gameplay and display at the top of
 
 As any FizzBuzz number can also be solved by either the individual Fizz and Buzz options, the code was always stopping at Fizz because this was the first 'correct' answer that it found. Once I realised this, I simply put FizzBuzz as the first option in the JS code to check the right answer, and this part of the game worked fine.
 
-- **Wrong User Feedback for Incorrect Answers.** After I first wrote the code to display the user feedback, it worked fine for correct answers, but a couple of problems let to the 'You chose ...' string being incorrectly filled when the answer was wrong. Here is an early draft of that code:
+- **Wrong User Feedback for Incorrect Answers.** After I first wrote the code to display the user feedback, it worked fine for correct answers, but a couple of problems led to the 'You chose ...' string being incorrectly filled when the answer was wrong. Here is an early draft of that code:
 
 
 ![Bug FizzBuzz answer](documentation/documentation-images/bug-userchoice.PNG)
 
-- In this version of the code, I did not set a 'userChoice variable, but rather linked it to the 'text content' like this: document.getElementById("user-choice").textContent = theAnswer
-This meant that the "user-choice" string was always being filled out by the answer, rather than what the user actually chose. I fixed this by setting an empty variable called 'userChoice' at the start of the 'getUserAnswer' function; then, within each section of the 'if' statement, defined what the user choice would be per possible answer. That means whenever the player clicks on an answer button, the empty userChoice variable is assigned the value of whatever button the player has clicked. The HTML string "user-choice" is therefore correctly populated with whatever the user clicked on, and this bug is solved.
+- In this version of the code, I did not set a 'userChoice variable, but rather mistakenly and wrongly linked it to the 'answer': document.getElementById("user-choice").textContent = theAnswer
+I was expecting that, by clicking on the button, it would populate the "user-choice" with the click. However, this meant that the "user-choice" string was always being filled out by the answer, rather than what the user actually chose. I fixed this by setting an empty variable called 'userChoice' at the start of the 'getUserAnswer' function; then, within each section of the 'if' statement, defined what the user choice would be per possible answer. That means whenever the player clicks on an answer button, the empty userChoice variable is assigned the value of whatever button the player has clicked. The HTML string "user-choice" is therefore correctly populated with whatever the user clicked on, and this bug is solved.
 
 - The padding was being over-written in the 'click for gameplay' section : 
 
@@ -356,7 +356,9 @@ I was an absolute beginner with Javascript at the start of this course, and have
 
 My initial and main source of information was the 'Javascript Essentials' and the 'Love Maths Project' on the Code Institute platform.
 
-I used Jon Duckett (2014) "Javascript and JQuery: Interactive Front-End Web Development", published by Wiley as a reference book.  
+I used the following books for reference: 
+Jon Duckett (2014) "Javascript and JQuery: Interactive Front-End Web Development", published by Wiley 
+Jon Duckett (2011) "HTML and CSS: Design and Build Websites", published by Wiley   
 
 I consulted many of the JS tutorials on w3schools: https://www.w3schools.com/js/default.asp
 
