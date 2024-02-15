@@ -251,25 +251,25 @@ The lighthouse testing returned good results.
 |Click Set Target Number after an answer has been given | Enables answer buttons        | Pass  |
 |Click Fizz answer button | Signals that the user has chosen Fizz        | Pass  |
 |Click Fizz answer button | Answer buttons are now disabled     | Pass  |
-|Click Fizz answer button | User feedback section is appropriately filled out with 'You have chosen Fizz'   | Pass  |
+|Click Fizz answer button | User feedback section is appropriately filled out with 'You chose Fizz'   | Pass  |
 |Click Fizz answer button | JS correctly calculates the answer and matches with Fizz input    | Pass  |
 |Click Fizz answer button | If the answer is Fizz, + 1 correct score        | Pass  |
 |Click Fizz answer button | If the answer is Fizz, + 1 incorrect score        | Pass |
 |Click Buzz answer button | Signals that the user has chosen Buzz        | Pass  |
 |Click Buzz answer button | Answer buttons are now disabled     | Pass  |
-|Click Buzz answer button | User feedback section is appropriately filled out with 'You have chosen Buzz'    | Pass  |
+|Click Buzz answer button | User feedback section is appropriately filled out with 'You chose Buzz'    | Pass  |
 |Click Buzz answer button | JS correctly calculates the answer and matches with Buzz input    | Pass  |
 |Click Buzz answer button | If the answer is Buzz, + 1 correct score        | Pass  |
 |Click Buzz answer button | If the answer is Buzz, + 1 incorrect score        | Pass |
 |Click FizzBuzz answer button | Signals that the user has chosen FizzBuzz        | Pass |  
 |Click FizzBuzz answer button | Answer buttons are now disabled     | Pass  |
-|Click FizzBuzz answer button | User feedback section is appropriately filled out with 'You have chosen FizzBuzz'    | Pass  |
+|Click FizzBuzz answer button | User feedback section is appropriately filled out with 'You chose FizzBuzz'    | Pass  |
 |Click FizzBuzz answer button | JS correctly calculates the answer and matches with FizzBuzz input    | Pass  |
 |Click FizzBuzz answer button | If the answer is FizzBuzz, + 1 correct score        | Pass  |
 |Click FizzBuzz answer button | If the answer is FizzBuzz, + 1 incorrect score        | Pass |
 |Click No answer button | Signals that the user has chosen No        | Pass | 
 |Click No answer button | Answer buttons are now disabled     | Pass  |
-|Click No answer button | User feedback section is appropriately filled out with 'You have chosen No'   | Pass  |
+|Click No answer button | User feedback section is appropriately filled out with 'You chose No'   | Pass  |
 |Click No answer button | JS correctly calculates the answer and matches with No input    | Pass  |
 |Click No answer button | If the answer is No, + 1 correct score        | Pass  |
 |Click No answer button | If the answer is No, + 1 incorrect score        | Pass |
