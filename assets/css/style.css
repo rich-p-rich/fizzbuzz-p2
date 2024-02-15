@@ -49,7 +49,6 @@ main {
 }
 
 /*Style 'click for rules' button in header*/
-
 .structure-btn {
     cursor: pointer;
     border: none;
@@ -65,6 +64,11 @@ main {
     border: none;
 }
 
+.hide {
+    display: none;
+}
+
+/*Style for gameplay explanation*/
 #game-rules {
     padding-left: 5px;
     box-sizing: border-box;
@@ -80,7 +84,6 @@ main {
 }
 
 /*Set general styles for the 'structure' buttons of show rules, set FizzBuzz and TargetNumbers*/
-
 #ready-fizzbuzz {
     background-color: darkorange;
     color: white;
@@ -106,6 +109,7 @@ main {
     text-align: justify;
 }
 
+/*Set style per individual answer button*/
 #fizzbuzz-btn {
     background-color: rgb(132, 23, 196);
     color: white;
@@ -156,11 +160,13 @@ main {
     font-weight: 800;
 }
 
+/*set style for next target number button*/
 #next-target-number {
     background-color: rgb(24, 184, 24);
     color: white;
 }
 
+/*set style for reset button*/
 #reset-scores {
     cursor: pointer;
     background-color: rgb(207, 26, 26);
@@ -169,10 +175,6 @@ main {
 
 footer {
     background-color: rgb(51, 28, 28);
-}
-
-.hide {
-    display: none;
 }
 
 /* Media query: small laptops and larger (768px and up) */

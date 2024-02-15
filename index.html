@@ -21,6 +21,7 @@
 <body>
     <header>
         <h1 id="header-text">Welcome to FizzBuzz!</h1>
+        <!--Gameplay explanation with toggle show / hide -->
         <button id="click-for-rules">How it works: click here</button>
         <div id="game-rules" class="hide">
             <h3 class="rules-headers">Gameplay</h3>
@@ -65,7 +66,6 @@
             <br>
             <p>Fizz: <span id="fizz-number"></span></p>
             <p>Buzz: <span id="buzz-number"></span></p>
-
             <!--Generate the Target Numbers-->
             <br>
             <button id="set-target-numbers" class="structure-btn allowAnsBtns">Set Target Number</button>
@@ -85,22 +85,26 @@
                 </button>
             </div>
             <br>
+            <!--Display user answer, the right answer and feedback 'correct / incorrect' -->
             <div id="result">
                 <p>You chose <span id="user-choice"></span></p>
                 <p>The right answer was <span id="right-answer"></span></p>
                 <p>Your answer was <span id="display-result"></span></p>
             </div>
             <br>
+            <!--Next Target Number button -->
             <button type="button" onclick="setTargetNumbers()" id="next-target-number"
                 class="structure-btn allowAnsBtns">Next Target
                 Number</button>
             <br>
             <br>
+            <!--Display score: number of correct and incorrect answers -->
             <div id="score">
                 <p>Correct answers: <span id="correct-answers">0</span></p>
                 <p>Incorrect answers: <span id="incorrect-answers">0</span></p>
             </div>
             <br>
+            <!--Reset scores to zero -->
             <button type="button" onclick="resetScore()" id="reset-scores" class="structure-btn allowAnsBtns">Reset
                 Scores
             </button>
@@ -110,7 +114,6 @@
         <div>
             <p></p>
         </div>
-
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
