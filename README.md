@@ -357,8 +357,8 @@ I was an absolute beginner with Javascript at the start of this course, and have
 My initial and main source of information was the 'Javascript Essentials' and the 'Love Maths Project' on the Code Institute platform.
 
 I used the following books for reference: 
-Jon Duckett (2014) "Javascript and JQuery: Interactive Front-End Web Development", published by Wiley 
-Jon Duckett (2011) "HTML and CSS: Design and Build Websites", published by Wiley   
+- Jon Duckett (2014) "Javascript and JQuery: Interactive Front-End Web Development", published by Wiley 
+- Jon Duckett (2011) "HTML and CSS: Design and Build Websites", published by Wiley   
 
 I consulted many of the JS tutorials on w3schools: https://www.w3schools.com/js/default.asp
 
