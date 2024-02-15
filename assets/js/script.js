@@ -135,7 +135,7 @@ function getUserAnswer(evt) {
       }
     }
   }
-  // Thid line es completes the line 'The correct answer was ...' in the HTML   
+  // The following two lines complete the line 'The correct answer was ...' in the HTML   
   document.getElementById("user-choice").textContent = userChoice;
   document.getElementById("right-answer").textContent = theAnswer;
 }

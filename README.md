@@ -13,7 +13,7 @@ I took the idea from a video called "FizzBuzz: One Simple Interview Question" by
 
 *image taken from https://www.youtube.com/watch?v=QPZ0pIK_wsc*
 
-I have always enjoyed this video, in particular the emphasis he puts on making the code easy to read, change and maintain. I worked in E-commerce in a previous career, and one of the shops I worked for used legacy code for its platform. This was extremely difficult and time-consuming to maintain and update which meant that implementing updates to the website was painful and costly; we had IT releases every second Monday and they invariably caused significant problems, including loss of sales due to poor website functionality following the release. Additionally, I set up an essay and writing skills for history undergraduates at University College London in the UK while I was studying there; this course had a strong focus on writing clearly and concisely, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
+I have always enjoyed this video, in particular the emphasis he puts on making the code easy to read, change and maintain. I worked in E-commerce in a previous career, and one of the shops I worked for used legacy code for its platform. This was extremely difficult and time-consuming to maintain and update which meant that implementing updates to the website was painful and costly; we had IT releases every second Monday and they invariably caused significant problems, including loss of sales due to poor website functionality following the release. Additionally, I set up an essay and writing skills for history undergraduates while I was doing research at University College London in the UK; this course had a strong focus on writing clearly and concisely, so the value Tom attaches to clear and direct code-writing, without repetition, resonated with me. 
 
 FizzBuzz therefore seemed like a natural fit for Project 2, not least because, in the above video, Tom writes his solution in Javascript, and this was my chance to actually try out different ways to solve this question. However, the setting for my version of the game is quite different to that shown in the video, which demonstrates a 'one-time' solution to coding the FizzBuzz problem in a job interview setting. 
 
@@ -23,6 +23,7 @@ In contrast, I wanted to turn it into an interactive online game. I wanted to av
 
 I therefore made a multiple choice game in which:
 - the Fizz and Buzz numbers stay constant for the duration of the game 
+- the player has a Target Number to solve (with the 4 options described below)
 - each Target Number represents a new question, and so the player constantly gets new Target Numbers for as long as they are playing 
 
 The player chooses from four options to solve the Target Number question: 
@@ -170,7 +171,7 @@ All three pieces of feedback are always shown, regardless of whether the player 
 
 The feedback sentences are deliberately between the answers and the 'Next Target Number' button to reflect the player's process -> answer question, find out if it was right, next question.
 
-I originally planned to highlight the button with the correct answer with a green border. However, this did not fit with the plan to disable the buttons after the user clicks their answer: a greyed-out button with a green border is a confusing mix of visual cues. Therefore I decided to simply write out the three bits of information as described above as this is clear and transparent for the player.
+I originally planned to highlight the correct button with a green border once they player had entered their answer. However, this did not fit with the plan to disable the buttons after the user clicks their answer: a greyed-out button with a green border is a confusing mix of visual cues. Therefore I decided to simply write out the three bits of information as described above, as this is clear and transparent for the player.
 
 
 **Next Target Number**
@@ -219,9 +220,16 @@ I used https://jshint.com/ to test my javascript. The only remaining feedback I 
 
 The lighthouse testing returned good results.
 
+- Mobile results: 
+
 ![Lighthouse 1](documentation/documentation-images/lighthouse-testing_1.PNG)
 
 ![Lighthouse 2](documentation/documentation-images/lighthouse-testing_2.PNG)
+
+- Desktop results: 
+
+![Lighthouse 3](documentation/documentation-images/lighthouse-testing_desktop.PNG)
+
 
 ## Testing: appearance and functionality
 - Testing done on Chrome, Firefox, Samsung Internet version 23.0.1.1 on a Samsung A33.
@@ -292,7 +300,21 @@ I was able to work out how to code each section, but I did not properly understa
 
 I encountered relatively few true bugs, as the process of writing JS code was itself difficult and the problems I had were because I did not write the code properly, or did not call the functions properly. So in contrast to Project 1 where I could write the code but had faulty outputs, the problems I faced led to me writing code with no output at all, which means I have relatively little to show.  
 
-However, a couple of minor bugs with regard to the gameplay display at the top of the page are worth mentioning.  
+However, a couple of  bugs with regard to the gameplay and display at the top of the page are worth mentioning.  
+
+- **FizzBuzz never a correct answer.** When I first coded the answer key, it was impossible for the 'FizzBuzz' answer to be correct. This is because I had used the same order for the JS code to check the correct buttons as that for the answer buttons in the HTML - Fizz, Buzz, FizzBuzz, No. This was my first draft of the code with 'FizzBuzz' at the bottom:  
+
+![Bug FizzBuzz answer](documentation/documentation-images/bug-fizzbuzz.PNG)
+
+As any FizzBuzz number can also be solved by either the individual Fizz and Buzz options, the code was always stopping at Fizz, since this was the first 'correct' answer that it found. Once I realised this, I simply put FizzBuzz as the first option in the JS code to check the right answer, and this part of the game worked fine.
+
+- **User Feedback for Wrong Answers: incorrect.** After I first wrote the code to display the user feedback, it worked fine for correct answers, but a couple of problems let to the 'You chose ...' string being incorrectly filled when the answer was wrong. Here is an early draft of that code:
+
+
+![Bug FizzBuzz answer](documentation/documentation-images/bug-userchoice.PNG)
+
+- In this version of the code, I did not set a 'userChoice variable, but rather linked it to the 'text content' like this: document.getElementById("user-choice").textContent = theAnswer
+This meant that the "user-choice" string was always being filled out by the answer, rather than what the user actually chose. I fixed this by setting an empty variable called 'userChoice' at the start of the 'getUserAnswer' function; then, within each section of the 'if' statement, defined what the user choice would be per possible answer. That means whenever the player clicks on an answer button, the empty userChoice variable is assigned the value of whatever button the player has clicked. The HTML string "user-choice" is therefore correctly populated with whatever the user clicked on.
 
 - The padding was being over-written in the 'click for gameplay' section : 
 
