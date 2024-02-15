@@ -298,7 +298,7 @@ I was able to work out how to code each section, but I did not properly understa
 
 **Bugs**
 
-I encountered relatively few true bugs, as the process of writing JS code was itself difficult and the problems I had were because I did not write the code properly, or did not call the functions properly. So in contrast to Project 1 where I could write the code but had faulty outputs, the problems I faced led to me writing code with no output at all, which means I have relatively little to show.  
+I encountered relatively few true bugs, as I found the process of writing functioning JS code difficult, and sometimes very difficult. So in contrast to Project 1 where I could write the code but had faulty outputs, the problems I faced in this project led to me writing code with no output at all, which means I have relatively little to show.  
 
 However, a couple of  bugs with regard to the gameplay and display at the top of the page are worth mentioning.  
 
